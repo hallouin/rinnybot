@@ -6,15 +6,15 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
+    if (message.content === 'r!ping') {
     	message.reply('pong desu!');
   	}
     
 });
     
 client.on('message', message => {
-    if (message.content === 'commands') {
-    	message.sendMessage('Come back later!');
+    if (message.content === 'r!commands') {
+    	message.channel.sendMessage('Come back later!');
   	}
     
 });
