@@ -36,19 +36,20 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 });
 
 client.on('message', message => {
+const mention = ["rinnybot"];
+if( mention.some(word => message.content.includes(word)) ) {
+  message.channel.sendMessage("Did someone call for me?");
+}
+    
+});
+
+client.on('message', message => {
 const lenny = ["r!lenny"];
 if( lenny.some(word => message.content.includes(word)) ) {
   message.delete(1000);
   message.channel.sendMessage("( ͡° ͜ʖ ͡°)");
 }
     
-});
-
-client.on('message', message => {
-   if (message.content.startsWith(config.prefix + "say")) {
-      message.delete(1000); //Supposed to delete message
-      message.channel.sendMessage(message.content.slice(5, message.content.length));
-   }
 });
 
 client.login(process.env.BOT_TOKEN);
