@@ -8,8 +8,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'ping')) {
-    const m = await message.channel.sendMessage('Ping?');
-    m.edit('Pong desu! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms');
+    message.channel.sendMessage('Pong desu!');
   }
 });
 
@@ -32,6 +31,14 @@ client.on('message', message => {
 const swearWords = ["i love rinnybot"];
 if( swearWords.some(word => message.content.includes(word)) ) {
   message.reply("I love you too! ♡");
+}
+    
+});
+
+client.on('message', message => {
+const swearWords = ["/o/"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("\o\");
 }
     
 });
