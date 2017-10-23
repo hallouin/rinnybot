@@ -1,1 +1,1 @@
-worker: node bot.js rinnybot
+worker: node bot.js
