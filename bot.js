@@ -13,7 +13,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === 'r!commands') {
+    if (message.content === (config.prefix + 'r!commands') {
     message.channel.sendMessage('Come back later!');
   } 
     
