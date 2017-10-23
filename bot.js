@@ -35,10 +35,4 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     
 });
 
-client.on("guildMemberAdd", (member) => {
-  console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
-  member.guild.defaultChannel.send(`"${member.user.username}" has joined this server`);
-}
-          
-});
 client.login(process.env.BOT_TOKEN);
