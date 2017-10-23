@@ -38,6 +38,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 client.on('message', message => {
 const lenny = ["r!lenny"];
 if( lenny.some(word => message.content.includes(word)) ) {
+  message.delete(1000);
   message.channel.sendMessage("( ͡° ͜ʖ ͡°)");
 }
     
