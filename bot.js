@@ -14,7 +14,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
-    message.channel.sendMessage('Come back later!');
+    message.channel.sendMessage('Under construction now (ᴗ˳ᴗ)｡｡｡zzz');
   } 
     
 });
@@ -35,12 +35,4 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     
 });
 
-client.on('message', message => {
-const swearWords = ["/o/"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.channel.sendMessage("\o\");
-}
-    
-});
-    
 client.login(process.env.BOT_TOKEN);
