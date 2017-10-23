@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + "ping")) {
+    if (message.content === (config.prefix + "ping")) {
     message.channel.sendMessage('Pong desu!');
   }
 });
