@@ -20,12 +20,25 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-const swearWords = ["hentai", "ochinchin", "oppai"];
+const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico"];
 if( swearWords.some(word => message.content.includes(word)) ) {
   message.reply("Lewd desu!");
-  // Or just do message.delete();
-    
 }
     
+});
+
+client.on('message', message => {
+const swearWords = ["i love rinnybot"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("I love you too! ♡");
+}
+    
+});
+
+client.on("guildMemberAdd", (member) => {
+  console.log(`New User "${member.user.username}" has joined "${member.guild.name}"` );
+  member.guild.defaultChannel.send(`"${member.user.username}" has joined this server`);
+}
+          
 });
 client.login(process.env.BOT_TOKEN);
