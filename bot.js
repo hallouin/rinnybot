@@ -7,9 +7,13 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === (config.prefix + 'ping')) {
-    message.channel.sendMessage('Pong desu!');
-  }
+const args = message.content.slice(prefix.length).trim().split(/ +/g);
+const command = args.shift().toLowerCase();
+    
+    if(command === 'ping') {
+    message.channel.send('Pong desu!');
+}
+    
 });
 
 client.on('message', message => {
