@@ -35,12 +35,4 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     
 });
 
-client.on('message', message => {
-const swearWords = ["/o/"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("\o\");
-}
-    
-});
-
 client.login(process.env.BOT_TOKEN);
