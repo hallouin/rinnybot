@@ -11,8 +11,8 @@ client.on('message', message => {
   	}
     
 client.on('message', message => {
-    if (message.content === 'r!commands) {
-    	message.reply('pong desu!');
+    if (message.content === 'r!commands') {
+    	message.reply('Come back later!');
   	}
     
 });
