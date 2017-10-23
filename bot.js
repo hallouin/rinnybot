@@ -10,10 +10,10 @@ const args = message.content.slice(prefix.length).trim().split(/ +/g);
 const command = args.shift().toLowerCase();
     
 if(command === 'ping') {
-  message.channel.send('Pong!');
+  message.channel.sendMessage('Pong!');
 } else 
 if (command === 'blah') {
-  message.channel.send('Meh.');
+  message.channel.sendMessage('Meh.');
 }
     
 });
