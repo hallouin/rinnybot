@@ -28,5 +28,12 @@ client.on('message', message => {
   }
 });
 
+ if(command === "r!lenny") {
+    const sayMessage = args.join("( ͡° ͜ʖ ͡°)");
+    message.delete().catch(O_o=>{}); 
+    message.channel.send(sayMessage);
+  }
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
