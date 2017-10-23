@@ -8,7 +8,8 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'ping')) {
-    message.channel.sendMessage('Pong desu!');
+    const m = await message.channel.send("Ping?");
+    m.edit(`Pong desu! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
 });
 
