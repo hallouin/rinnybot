@@ -36,16 +36,6 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 });
 
 client.on('message', message => {
-const mention = ["rinnybot"];
-if( mention.some(word => message.content === ("i love rinnybot")) return;
-   } else
-if( mention.some(word => message.content.includes(word))) {
-  message.channel.sendMessage("Did someone call for me?");
-}
-    
-});
-
-client.on('message', message => {
 const lenny = ["r!lenny"];
 if( lenny.some(word => message.content.includes(word)) ) {
   message.delete(1000);
