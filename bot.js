@@ -10,7 +10,6 @@ client.on('message', message => {
     message.channel.sendMessage('Pong desu!');
   }
     
-client.on('message', message => {
     if (message.content === 'r!commands') {
     message.channel.sendMessage('Come back later!');
   } 
