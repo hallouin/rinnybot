@@ -1,13 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "r!";
 
 client.on('ready', () => {
     console.log('Rinnybot is here!');
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(prefix + 'ping')) {
+    if (message.content === 'r!ping') {
     message.channel.sendMessage('Pong desu!');
   }
     
