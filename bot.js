@@ -6,9 +6,13 @@ client.on('ready', () => {
     console.log('Rinnybot is here!');
 });
 
-client.on('message', message => {
-    if (message.content === (config.prefix + 'ping')) {
-    message.channel.sendMessage('Pong desu!');
+client.on("message", async message => {
+    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+ if(command === "ping") {
+    const m = await message.channel.send("Ping?");
+    m.edit(`Pong desu! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+  }
   }
 });
 
