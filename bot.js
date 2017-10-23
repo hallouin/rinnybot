@@ -8,14 +8,14 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'ping')) {
-    const m = await message.channel.send("Ping?");
+    const m = await message.channel.sendMessage("Ping?");
     m.edit(`Pong desu! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
 });
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
-    message.channel.sendMessage('Come back later!!');
+    message.channel.sendMessage('Come back later!');
   } 
     
 });
