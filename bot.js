@@ -35,13 +35,4 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     
 });
 
-client.on('message', message => {
-  if(message.content === (config.prefix + 'lenny face') {
-  const lenny = ["( ͡° ͜ʖ ͡°)"];
-    message.delete().catch(O_o=>{}); 
-    message.channel.sendMessage(lenny);
-  }
-
-});
-
 client.login(process.env.BOT_TOKEN);
