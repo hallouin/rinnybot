@@ -22,7 +22,12 @@ client.on('message', message => {
 client.on('message', message => {
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico"];
 if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("Lewd desu!");
+  const embed = {
+  "image": {
+    "url": "https://i.stack.imgur.com/MKMpFm.jpg"
+  }
+};
+message.channel.sendMessage("Lewd desu!", { embed });;
 }
     
 });
