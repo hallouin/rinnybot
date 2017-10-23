@@ -14,7 +14,7 @@ client.on('message', message => {
     
 client.on('message', message => {
     if (message.content === 'r!commands') {
-    	message('Come back later!');
+    	message.content('Come back later!');
   	}
     
 });
