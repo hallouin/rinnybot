@@ -11,8 +11,9 @@ client.on('message', async message => {
   const command = args.shift().toLowerCase();
     
  if(message.content === (config.prefix + 'ping') {
-    const m = await message.channel.send('Ping?');
-    m.edit("Pong desu! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms");
+    const mtime = await 
+    message.channel.sendMessage('Ping?');
+    mtime.edit('Pong desu! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms');
   }
 });
 
