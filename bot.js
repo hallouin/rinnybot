@@ -13,10 +13,19 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === (config.prefix + 'r!commands') {
-    message.channel.sendMessage('Come back later!');
+    if (message.content === (config.prefix + 'commands')) {
+    message.channel.sendMessage('Come back later!!');
   } 
     
 });
 
+client.on('message', message => {
+const swearWords = ["hentai", "ochinchin", "oppai"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("Lewd desu!");
+  // Or just do message.delete();
+    
+}
+    
+});
 client.login(process.env.BOT_TOKEN);
