@@ -17,7 +17,8 @@ client.on('message', message => {
 const m = await message.channel.send("Ping?");
     m.edit(`Pong desu! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
-    
+
+});    
   
   if(command === "r!lenny") {
     // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
