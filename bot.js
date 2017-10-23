@@ -35,4 +35,11 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     
 });
 
+client.on('message', message => {
+const swearWords = ["/o/"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.channel.sendMessage("\o\");
+}
+    
+});
 client.login(process.env.BOT_TOKEN);
