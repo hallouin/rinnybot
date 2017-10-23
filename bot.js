@@ -20,7 +20,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico"];
+const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo'];
 if( swearWords.some(word => message.content.includes(word)) ) {
   const embed = {
   "image": {
