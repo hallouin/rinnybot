@@ -27,6 +27,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    if (message.content === (config.prefix + 'help')) {
     const embed1 = {
   "title": "`r!ping`",
   "description": "Responds with `Pong desu!` Will include numerical value for ping (ms) soon.",
@@ -66,10 +67,9 @@ client.on('message', message => {
   ]
 };
     
-    if (message.content === (config.prefix + 'help')) {
+
     message.channel.sendMessage({ embed1 });
         message.channel.sendMessage({ embed2 });
-        message.channel.sendMessage({ embed3 });
         message.channel.sendMessage("Music commands comming soon!")
   } 
     
