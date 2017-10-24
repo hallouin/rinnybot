@@ -27,7 +27,18 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     "url": "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-17.gif"
   }
 };
-message.channel.sendMessage("Lewd desu!", { embed });;
+    const embed2 = {
+  "image": {
+    "url": "http://i3.kym-cdn.com/photos/images/newsfeed/000/786/305/7db.gif"
+  }
+};
+    const embed3 = {
+  "image": {
+    "url": "https://i.imgur.com/XoYgHyi.jpg"
+  }
+};
+    
+message.channel.sendMessage("Lewd desu!", { embed } || "Lewd desu!", { embed2 });;
 }
     
 });
