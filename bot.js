@@ -20,13 +20,13 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd'];
+const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd', 'HENTAI,' 'OCHINCHIN', 'OPPAI', 'BOKU NO PICO', 'ECCHI', 'CHINCHIN', 'CHINPO', 'PANTIES', 'panty shot', 'Hentai', 'Ochinchin', 'Oppai', 'Boku no Pico', 'Boku no pico', 'Ecchi', 'Chinchi', 'Chinpo', 'Panties', 'Panty shot', 'LEWD', 'Lewd', 'lood'];
 if (message.author.bot) return;
     
     if( swearWords.some(word => message.content.includes(word)) ) {
   const embed = {
   "image": {
-    "url": "https://i.stack.imgur.com/MKMpFm.jpg"
+    "url": "https://i.imgur.com/XoYgHyi.jpg"
   }
 };
 message.channel.sendMessage("Lewd desu!", { embed });;
