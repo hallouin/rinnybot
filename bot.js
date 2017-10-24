@@ -85,7 +85,7 @@ client.on('message', message => {
     if (message.content === (config.prefix + 'gimme')) {
    const embed = {
   "image": {
-    "url": "http://cloud-3.steamusercontent.com/ugc/387667044028600527/E7AF53FA26A3F8C1749555A80FFA0706F73A4651/"
+    "url": "http://data.whicdn.com/images/82274594/original.gif"
   }
 };
 message.channel.sendMessage({ embed });
