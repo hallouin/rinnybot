@@ -65,7 +65,7 @@ client.on('message', message => {
 
 };
     message.author.sendMessage("Here are my list of commands!", { embed });
-        message.channel.reply("No problem! I've sent you a DM.")
+        message.channel.reply("No problem! I've sent you a DM.");
   } 
     
 });
