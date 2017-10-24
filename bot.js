@@ -94,7 +94,8 @@ message.channel.sendMessage({ embed });
 });
 
 client.on('message', message => {
-    if (message.content === (config.prefix + 'hug')) {
+const swearWords = ["r!hug"];
+if( swearWords.some(word => message.content.includes(word)) ) {
    const embed = {
   "image": {
     "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif"
