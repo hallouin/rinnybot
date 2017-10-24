@@ -64,7 +64,7 @@ client.on('message', message => {
   ]
 
 };
-    message.delete(100)
+    message.channel.reply("Gotcha! Sent you a DM!")
     message.author.sendMessage("Here are my list of commands!", { embed });
   } 
     
