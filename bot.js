@@ -14,16 +14,88 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
-    message.channel.sendMessage('Under construction now (ᴗ˳ᴗ)｡｡｡zzz');
-  } 
-    
+const embed = {
+  "title": "`r!ping`",
+  "description": "Responds with `Pong desu!` Will include numerical value for ping (ms) soon.",
+  "color": 9059670,
+  "fields": [
+    {
+      "name": "`r!commands` , `r!command` , `r!help`",
+      "value": "Displays a list of commands available for use with Rinnybot."
+    },
+       {
+      "name": "`r!yes`",
+      "value": "(ﾟｰﾟ)(｡_｡)"
+    },
+      {
+      "name": "`r!no`",
+      "value": "(･_･ 三 ･_･) "
+    },
+    {
+      "name": "`r!nope`",
+      "value": "=͟͟͞͞(　 ω )=͟͟͞͞　³ ³"
+    },
+    {
+      "name": "`r!teehee`",
+      "value": "(ﾉ≧ڡ≦)"
+    },
+    {
+      "name": "`r!gimme`",
+      "value": "(੭ु´･ω･`)੭ु⁾⁾"
+    },
+    {
+      "name": "`r!hug` or `r!hug @user`",
+      "value": "꒰๑*´ᗜ`*꒱*›◡‹꒱꒱"
+    }
+  ]
+
+};
+    message.delete(100)
+    message.author.sendMessage("Here are my list of commands!", { embed }); 
+} 
 });
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'command')) {
-    message.channel.sendMessage('Under construction now (ᴗ˳ᴗ)｡｡｡zzz');
-  } 
-    
+const embed = {
+  "title": "`r!ping`",
+  "description": "Responds with `Pong desu!` Will include numerical value for ping (ms) soon.",
+  "color": 9059670,
+  "fields": [
+    {
+      "name": "`r!commands` , `r!command` , `r!help`",
+      "value": "Displays a list of commands available for use with Rinnybot."
+    },
+       {
+      "name": "`r!yes`",
+      "value": "(ﾟｰﾟ)(｡_｡)"
+    },
+      {
+      "name": "`r!no`",
+      "value": "(･_･ 三 ･_･) "
+    },
+    {
+      "name": "`r!nope`",
+      "value": "=͟͟͞͞(　 ω )=͟͟͞͞　³ ³"
+    },
+    {
+      "name": "`r!teehee`",
+      "value": "(ﾉ≧ڡ≦)"
+    },
+    {
+      "name": "`r!gimme`",
+      "value": "(੭ु´･ω･`)੭ु⁾⁾"
+    },
+    {
+      "name": "`r!hug` or `r!hug @user`",
+      "value": "꒰๑*´ᗜ`*꒱*›◡‹꒱꒱"
+    }
+  ]
+
+};
+    message.delete(100)
+    message.author.sendMessage("Here are my list of commands!", { embed }); 
+} 
 });
 
 client.on('message', message => {
