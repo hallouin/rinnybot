@@ -40,7 +40,7 @@ client.on('message', message => {
     "url": "http://25.media.tumblr.com/tumblr_mbqui4CyUm1riu78lo1_500.gif"
   }
 };
-message.channel.sendMessage("Yes!", { embed });;
+message.channel.sendMessage("Yes!", { embed });
 }
     
 });
@@ -52,7 +52,7 @@ client.on('message', message => {
     "url": "http://media.giphy.com/media/VYwLv746owIkU/giphy.gif"
   }
 };
-message.channel.sendMessage("No!", { embed });;
+message.channel.sendMessage("No!", { embed });
 }
     
 });
@@ -64,7 +64,7 @@ client.on('message', message => {
     "url": "https://media.giphy.com/media/pXPBrb74aJhUQ/giphy.gif"
   }
 };
-message.channel.sendMessage("NOPE NOPE NOPE", { embed });;
+message.channel.sendMessage("NOPE NOPE NOPE", { embed });
 }
     
 });
@@ -76,7 +76,7 @@ client.on('message', message => {
     "url": "http://pa1.narvii.com/5591/2efc311fd908344b01ed7a3723d8f066bb267246_hq.gif"
   }
 };
-message.channel.sendMessage("TEEHEE (ﾉ≧ڡ≦)", { embed });;
+message.channel.sendMessage("TEEHEE (ﾉ≧ڡ≦)", { embed });
 }
     
 });
@@ -88,7 +88,7 @@ client.on('message', message => {
     "url": "http://cloud-3.steamusercontent.com/ugc/387667044028600527/E7AF53FA26A3F8C1749555A80FFA0706F73A4651/"
   }
 };
-message.channel.sendMessage({ embed });;
+message.channel.sendMessage({ embed });
 }
     
 });
@@ -100,7 +100,7 @@ client.on('message', message => {
     "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif"
   }
 };
-message.channel.sendMessage({ embed });;
+message.channel.sendMessage({ embed });
 }
     
 });
@@ -113,7 +113,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     "url": "https://i.imgur.com/XoYgHyi.jpg"
   }
 };
-message.channel.sendMessage("Lewd desu!", { embed });;
+message.channel.sendMessage("Lewd desu!", { embed });
 }
     
 });
