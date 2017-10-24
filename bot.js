@@ -64,9 +64,10 @@ client.on('message', message => {
   ]
 
 };
-    message.channel.reply("Gotcha! Sent you a DM!")
+    
     message.author.sendMessage("Here are my list of commands!", { embed });
   } 
+    message.channel.reply("Gotcha! Sent you a DM!")
     
 });
 
