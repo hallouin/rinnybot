@@ -39,8 +39,34 @@ client.on('message', message => {
     }
   ]
 }; 
-        
-    message.channel.sendMessage({ embed });
+        const embed2 = {
+  "title": "`r!yes`",
+  "description": "(ﾟｰﾟ)(｡_｡) ",
+  "color": 9059670,
+  "fields": [
+    {
+      "name": "`r!no`",
+      "value": "(･_･ 三 ･_･) "
+    },
+    {
+      "name": "`r!nope`",
+      "value": "=͟͟͞͞(　 ω )=͟͟͞͞　³ ³"
+    },
+    {
+      "name": "`r!teehee`",
+      "value": "(ﾉ≧ڡ≦)"
+    },
+    {
+      "name": "`r!gimme`",
+      "value": "(੭ु´･ω･`)੭ु⁾⁾"
+    },
+    {
+      "name": "`r!hug` or `r!hug @user`",
+      "value": "꒰๑*´ᗜ`*꒱*›◡‹꒱꒱"
+    }
+  ]
+};
+    message.channel.sendMessage("GENERAL", { embed }, "REACTIONS", { embed2 });
   } 
     
 });
