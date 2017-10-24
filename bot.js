@@ -23,9 +23,9 @@ client.on('message', message => {
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd', 'HENTAI,' 'OCHINCHIN', 'OPPAI', 'BOKU NO PICO', 'ECCHI', 'CHINCHIN', 'CHINPO', 'PANTIES', 'panty shot', 'Hentai', 'Ochinchin', 'Oppai', 'Boku no Pico', 'Boku no pico', 'Ecchi', 'Chinchi', 'Chinpo', 'Panties', 'Panty shot', 'LEWD', 'Lewd', 'lood'];
 
 if( swearWords.some(word => message.content.includes(word)) ) {
-  const lewd1 = {
+  const embed = {
   "embed": {
-    "url": "https://i.imgur.com/XoYgHyi.jpg"
+    "url": "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-17.gif"
   }
 };
 message.channel.sendMessage("Lewd desu!", { embed });;
