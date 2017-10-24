@@ -26,7 +26,7 @@ client.on('message', message => {
     "url": "http://25.media.tumblr.com/tumblr_mbqui4CyUm1riu78lo1_500.gif"
   }
 };
-message.channel.sendMessage("Lewd desu!", { embed });;
+message.channel.sendMessage("Yes!", { embed });;
 }
     
 });
@@ -38,7 +38,7 @@ client.on('message', message => {
     "url": "http://media.giphy.com/media/VYwLv746owIkU/giphy.gif"
   }
 };
-message.channel.sendMessage("Lewd desu!", { embed });;
+message.channel.sendMessage("No!", { embed });;
 }
     
 });
@@ -50,7 +50,7 @@ client.on('message', message => {
     "url": "https://media.giphy.com/media/pXPBrb74aJhUQ/giphy.gif"
   }
 };
-message.channel.sendMessage("Lewd desu!", { embed });;
+message.channel.sendMessage("NOPE NOPE NOPE", { embed });;
 }
     
 });
@@ -62,7 +62,7 @@ client.on('message', message => {
     "url": "http://pa1.narvii.com/5591/2efc311fd908344b01ed7a3723d8f066bb267246_hq.gif"
   }
 };
-message.channel.sendMessage("Lewd desu!", { embed });;
+message.channel.sendMessage("TEEHEE (ﾉ≧ڡ≦)", { embed });;
 }
     
 });
