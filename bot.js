@@ -19,39 +19,20 @@ client.on('message', message => {
     
 });
 
-client.on('message', message => {
+client.on("message", (message) =>{
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd'];
-if( swearWords.some(word => message.content.includes(word)) ) { ///1
-  const embed = {
-  "image": {
-    "url": "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-17.gif"
+    const rng = {Math.floor((Math.random() * 3) + 1)};
+if( swearWords.some(word => message.content.includes(word)) ) {
+    if(rng === 1) {
+    message.channel.sendMessage("Lewd desu!", { embed } );
   }
-};
-    const embed2 = {
-  "image": {
-    "url": "http://i3.kym-cdn.com/photos/images/newsfeed/000/786/305/7db.gif"
+  if(rng === 2) {
+    message.channel.sendMessage("Lewd desu!", { embed2 } );
   }
-};
-    const embed3 = {
-  "image": {
-    "url": "https://i.imgur.com/XoYgHyi.jpg"
-  }
-}; 
-
-const rng = {Math.floor((Math.random() * 3) + 1)};
-    if (rng === 1) {
-message.channel.sendMessage("Lewd desu!", { embed } );
-    };
-
-    if (rng === 2) {
-message.channel.sendMessage("Lewd desu!", { embed2 } );
-    };
-
-    if (rng === 3) {
-message.channel.sendMessage("Lewd desu!", { embed3 } );
-    };
-    
-}); ///1
+  if(rng === 3) {
+    message.channel.sendMessage("Lewd desu!", { embed3 } );
+  }}
+});
 
 client.on('message', message => {
 const swearWords = ["i love rinnybot"];
