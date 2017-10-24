@@ -40,7 +40,7 @@ client.on('message', message => {
 }; 
     
     if (message.content === (config.prefix + 'help')) {
-    message.author.sendMessage({ embed1 });
+    message.channel.sendMessage({ embed1 });
   } 
     
 });
