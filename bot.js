@@ -110,10 +110,10 @@ const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'ch
 if( swearWords.some(word => message.content.includes(word)) ) {
   const embed = {
   "image": {
-    "url": "https://i.imgur.com/XoYgHyi.jpg"
+    "url": "https://i.imgur.com/XoYgHyi.gif"
   }
 };
-message.channel.sendMessage("Lewd desu!", "https://i.imgur.com/XoYgHyi.jpg");
+message.channel.sendMessage("Lewd desu!", { embed });
 }
     
 });
