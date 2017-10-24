@@ -41,15 +41,13 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 const rng = Math.floor((Math.random() * 3) + 1);
     if (rng === 1) 
 message.channel.sendMessage("Lewd desu!", { embed } );
-}
-};
-        if (rng === 2) 
+
+    if (rng === 2) 
 message.channel.sendMessage("Lewd desu!", { embed2 } );
-}
-};
-              if (rng === 3) 
+
+    if (rng === 3) 
 message.channel.sendMessage("Lewd desu!", { embed3 } );
-}
+
     
 });
 
