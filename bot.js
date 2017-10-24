@@ -36,15 +36,12 @@ client.on('message', message => {
     {
       "name": "`r!commands` , `r!command` , `r!help`",
       "value": "Displays a list of commands available for use with Rinnybot."
-    }
-  ]
-}; 
-        const embed2 = {
-  "title": "`r!yes`",
-  "description": "(ﾟｰﾟ)(｡_｡) ",
-  "color": 9059670,
-  "fields": [
-    {
+    },
+       {
+      "name": "`r!yes`",
+      "value": "(ﾟｰﾟ)(｡_｡)"
+    },
+      {
       "name": "`r!no`",
       "value": "(･_･ 三 ･_･) "
     },
@@ -65,8 +62,9 @@ client.on('message', message => {
       "value": "꒰๑*´ᗜ`*꒱*›◡‹꒱꒱"
     }
   ]
+
 };
-    message.channel.sendMessage("GENERAL", { embed }, "REACTIONS", { embed2 });
+    message.channel.sendMessage("No problem! Here are my list of commands!", { embed });
   } 
     
 });
