@@ -20,6 +20,54 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    if (message.content === (config.prefix + 'yes')) {
+   const embed = {
+  "image": {
+    "url": "http://25.media.tumblr.com/tumblr_mbqui4CyUm1riu78lo1_500.gif"
+  }
+};
+message.channel.sendMessage("Lewd desu!", { embed });;
+}
+    
+});
+
+client.on('message', message => {
+    if (message.content === (config.prefix + 'no')) {
+   const embed = {
+  "image": {
+    "url": "http://media.giphy.com/media/VYwLv746owIkU/giphy.gif"
+  }
+};
+message.channel.sendMessage("Lewd desu!", { embed });;
+}
+    
+});
+
+client.on('message', message => {
+    if (message.content === (config.prefix + 'nope')) {
+   const embed = {
+  "image": {
+    "url": "https://media.giphy.com/media/pXPBrb74aJhUQ/giphy.gif"
+  }
+};
+message.channel.sendMessage("Lewd desu!", { embed });;
+}
+    
+});
+
+client.on('message', message => {
+    if (message.content === (config.prefix + 'teehee')) {
+   const embed = {
+  "image": {
+    "url": "http://pa1.narvii.com/5591/2efc311fd908344b01ed7a3723d8f066bb267246_hq.gif"
+  }
+};
+message.channel.sendMessage("Lewd desu!", { embed });;
+}
+    
+});
+
+client.on('message', message => {
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd'];
 if( swearWords.some(word => message.content.includes(word)) ) {
   const embed = {
