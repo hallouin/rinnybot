@@ -19,19 +19,17 @@ client.on('message', message => {
     
 });
 
-client.on("message", (message) =>{
+client.on('message', message => {
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd'];
-    const rng = {Math.floor((Math.random() * 3) + 1)};
 if( swearWords.some(word => message.content.includes(word)) ) {
-    if(rng === 1) {
-    message.channel.sendMessage("Lewd desu!", { embed } );
+  const embed = {
+  "image": {
+    "url": "https://i.imgur.com/XoYgHyi.jpg"
   }
-  if(rng === 2) {
-    message.channel.sendMessage("Lewd desu!", { embed2 } );
-  }
-  if(rng === 3) {
-    message.channel.sendMessage("Lewd desu!", { embed3 } );
-  }}
+};
+message.channel.sendMessage("Lewd desu!", { embed });;
+}
+    
 });
 
 client.on('message', message => {
