@@ -28,7 +28,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'help')) {
-    const embed1 = {
+    const embed = {
   "title": "`r!ping`",
   "description": "Responds with `Pong desu!` Will include numerical value for ping (ms) soon.",
   "color": 9059670,
@@ -39,36 +39,8 @@ client.on('message', message => {
     }
   ]
 }; 
-        const embed2 = {
-  "title": "`r!yes`",
-  "description": "(ﾟｰﾟ)(｡_｡) ",
-  "color": 9059670,
-  "fields": [
-    {
-      "name": "`r!no`",
-      "value": "(･_･ 三 ･_･) "
-    },
-    {
-      "name": "`r!nope`",
-      "value": "=͟͟͞͞(　 ω )=͟͟͞͞　³ ³"
-    },
-    {
-      "name": "`r!teehee`",
-      "value": "(ﾉ≧ڡ≦)"
-    },
-    {
-      "name": "`r!gimme`",
-      "value": "(੭ु´･ω･`)੭ु⁾⁾"
-    },
-    {
-      "name": "`r!hug` or `r!hug @user`",
-      "value": "꒰๑*´ᗜ`*꒱*›◡‹꒱꒱"
-    }
-  ]
-};
-    
-    message.channel.sendMessage({ embed1 });
-
+        
+    message.channel.sendMessage({ embed });
   } 
     
 });
