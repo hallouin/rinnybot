@@ -24,7 +24,7 @@ const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'ch
 if( swearWords.some(word => message.content.includes(word)) ) {
   const embed = {
   "image": {
-    "url": "https://i.stack.imgur.com/MKMpFm.jpg"
+    "url": "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-17.gif"
   }
 };
 message.channel.sendMessage("Lewd desu!", { embed });;
