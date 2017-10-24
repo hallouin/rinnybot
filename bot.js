@@ -38,7 +38,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
   }
 };
 
-const rng = Math.floor((Math.random() * 3) + 1);
+const rng = {Math.floor((Math.random() * 3) + 1)};
     if (rng === 1) 
 message.channel.sendMessage("Lewd desu!", { embed } );
 
