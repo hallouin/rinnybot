@@ -116,7 +116,7 @@ if (rng === 1) {message.channel.sendMessage({ embed1 });
     if (rng === 4) {message.channel.sendMessage({ embed4 });
 } else 
     if (rng === 5) {message.channel.sendMessage({ embed5 });
-} else 
+}
     
 });
 
