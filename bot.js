@@ -129,6 +129,46 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 });
 
 client.on('message', message => {
+const swearWords = ["I love rinnybot"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("I love you too! ♡");
+}
+    
+});
+
+client.on('message', message => {
+const swearWords = ["i love Rinnybot"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("I love you too! ♡");
+}
+    
+});
+
+client.on('message', message => {
+const swearWords = ["I love Rinnybot"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("I love you too! ♡");
+}
+    
+});
+
+client.on('message', message => {
+const swearWords = ["I LOVE RINNYBOT"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("I love you too! ♡");
+}
+    
+});
+
+client.on('message', message => {
+const swearWords = ["I LOVE YOU RINNYBOT"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+  message.reply("I love you too! ♡");
+}
+    
+});
+
+client.on('message', message => {
 const lenny = ["r!lenny"];
 if( lenny.some(word => message.content === (word)) ) {
   message.delete(100);
