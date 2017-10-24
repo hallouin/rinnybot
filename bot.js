@@ -113,7 +113,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     "url": "https://i.imgur.com/XoYgHyi.jpg"
   }
 };
-message.channel.sendMessage("Lewd desu!", { embed });
+message.channel.sendMessage("Lewd desu!", https://i.imgur.com/XoYgHyi.jpg);
 }
     
 });
