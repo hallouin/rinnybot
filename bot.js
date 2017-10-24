@@ -105,7 +105,6 @@ client.on('message', message => {
   "image": {
     "url": "https://i.pinimg.com/originals/bf/b5/be/bfb5bed89f8c09bf53eab687eb3f9404.gif"
   }
-};
         
 if (rng === 1) {message.channel.sendMessage({ embed1 });
 } else 
