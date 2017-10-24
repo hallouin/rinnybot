@@ -67,8 +67,7 @@ client.on('message', message => {
   ]
 };
     
-
-    message.channel.sendMessage({ embed1 }, { embed2 }, "Music commands coming soon!");
+    message.channel.sendMessage({ embed1 }, { embed2 });
 
   } 
     
