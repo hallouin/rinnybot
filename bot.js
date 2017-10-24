@@ -68,6 +68,18 @@ message.channel.sendMessage("TEEHEE (ﾉ≧ڡ≦)", { embed });;
 });
 
 client.on('message', message => {
+    if (message.content === (config.prefix + 'gimme')) {
+   const embed = {
+  "image": {
+    "url": "http://cloud-3.steamusercontent.com/ugc/387667044028600527/E7AF53FA26A3F8C1749555A80FFA0706F73A4651/"
+  }
+};
+message.channel.sendMessage("Gimme :sobu:", { embed });;
+}
+    
+});
+
+client.on('message', message => {
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd'];
 if( swearWords.some(word => message.content.includes(word)) ) {
   const embed = {
