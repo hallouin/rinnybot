@@ -79,8 +79,8 @@ message.channel.sendMessage({ embed });;
     
 });
 
-client.on('message', message => {
-    if (message.content === (config.prefix + 'hug')) {
+client.on("message", message => {
+    if (message.content === (config.prefix + "hug")) {
    const embed1 = {
   "image": {
     "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif"
@@ -104,20 +104,20 @@ client.on('message', message => {
            const embed5 = {
   "image": {
     "url": "https://i.pinimg.com/originals/bf/b5/be/bfb5bed89f8c09bf53eab687eb3f9404.gif"
-  }};
+          }};
         
 if (rng === 1) {message.channel.sendMessage({ embed1 });
-} else 
+} else
     if (rng === 2) {message.channel.sendMessage({ embed2 });
-} else 
+} else
     if (rng === 3) {message.channel.sendMessage({ embed3 });
-} else 
+} else
     if (rng === 4) {message.channel.sendMessage({ embed4 });
-} else 
+} else
     if (rng === 5) {message.channel.sendMessage({ embed5 });
 }
     
-});
+                                            }});
 
 client.on('message', message => {
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd'];
