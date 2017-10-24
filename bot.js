@@ -21,7 +21,9 @@ client.on('message', message => {
 
 client.on('message', message => {
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd'];
-if( swearWords.some(word => message.content.includes(word)) ) {
+if (message.author.bot) return;
+    
+    if( swearWords.some(word => message.content.includes(word)) ) {
   const embed = {
   "image": {
     "url": "https://i.stack.imgur.com/MKMpFm.jpg"
