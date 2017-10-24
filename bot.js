@@ -37,7 +37,9 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     "url": "https://i.imgur.com/XoYgHyi.jpg"
   }
 };
-    
+
+const rng = Math.floor((Math.random() * 3) + 1);
+    if (rng === 1) 
 message.channel.sendMessage("Lewd desu!", { embed } || "Lewd desu!", { embed2 });;
 }
     
