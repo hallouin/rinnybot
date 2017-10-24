@@ -80,6 +80,43 @@ message.channel.sendMessage("Gimme :sobu:", { embed });;
 });
 
 client.on('message', message => {
+    if (message.content === (config.prefix + 'cuddle')) {
+        const rng = {math.floor((Math.random() *10) +1)}
+   const embed = {
+  "image": {
+    "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif"
+  }
+};
+           const embed2 = {
+  "image": {
+    "url": "https://i.pinimg.com/originals/bf/b5/be/bfb5bed89f8c09bf53eab687eb3f9404.gif"
+  }
+};
+           const embed3 = {
+  "image": {
+    "url": "https://media.tenor.com/images/42922e87b3ec288b11f59ba7f3cc6393/tenor.gif"
+  }
+};
+           const embed4 = {
+  "image": {
+    "url": "https://78.media.tumblr.com/e790af0168cd80394b7d792dde07407b/tumblr_o76qfcMiFn1sk1rjvo1_500.gif"
+  }
+};
+           const embed5 = {
+  "image": {
+    "url": "http://i.imgur.com/p7beIyD.gif"
+  }
+};
+if (rng === 1) {message.channel.sendMessage("Gimme :sobu:", { embed })};
+        if (rng === 2) {message.channel.sendMessage("Gimme :sobu:", { embed2 })}
+        if (rng === 3) {message.channel.sendMessage("Gimme :sobu:", { embed3 })}
+        if (rng === 4) {message.channel.sendMessage("Gimme :sobu:", { embed4 })}
+        if (rng === 5) {message.channel.sendMessage("Gimme :sobu:", { embed5 })}
+}
+    
+});
+
+client.on('message', message => {
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd'];
 if( swearWords.some(word => message.content.includes(word)) ) {
   const embed = {
