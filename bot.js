@@ -74,8 +74,49 @@ client.on('message', message => {
     "url": "http://cloud-3.steamusercontent.com/ugc/387667044028600527/E7AF53FA26A3F8C1749555A80FFA0706F73A4651/"
   }
 };
-message.channel.sendMessage("Gimme :sobu:", { embed });;
+message.channel.sendMessage({ embed });;
 }
+    
+});
+
+client.on('message', message => {
+    if (message.content === (config.prefix + 'hug')) {
+   const embed1 = {
+  "image": {
+    "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif"
+  }
+};
+           const embed2 = {
+  "image": {
+    "url": "https://media.tenor.com/images/42922e87b3ec288b11f59ba7f3cc6393/tenor.gif"
+  }
+};
+           const embed3 = {
+  "image": {
+    "url": "https://78.media.tumblr.com/e790af0168cd80394b7d792dde07407b/tumblr_o76qfcMiFn1sk1rjvo1_500.gif"
+  }
+};
+           const embed4 = {
+  "image": {
+    "url": "http://i.imgur.com/p7beIyD.gif"
+  }
+};
+           const embed5 = {
+  "image": {
+    "url": "https://i.pinimg.com/originals/bf/b5/be/bfb5bed89f8c09bf53eab687eb3f9404.gif"
+  }
+};
+        
+if (rng === 1) {message.channel.sendMessage({ embed1 });
+} else 
+    if (rng === 2) {message.channel.sendMessage({ embed2 });
+} else 
+    if (rng === 3) {message.channel.sendMessage({ embed3 });
+} else 
+    if (rng === 4) {message.channel.sendMessage({ embed4 });
+} else 
+    if (rng === 5) {message.channel.sendMessage({ embed5 });
+} else 
     
 });
 
