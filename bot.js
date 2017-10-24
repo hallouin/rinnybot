@@ -23,7 +23,7 @@ client.on('message', message => {
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd', 'HENTAI,' 'OCHINCHIN', 'OPPAI', 'BOKU NO PICO', 'ECCHI', 'CHINCHIN', 'CHINPO', 'PANTIES', 'panty shot', 'Hentai', 'Ochinchin', 'Oppai', 'Boku no Pico', 'Boku no pico', 'Ecchi', 'Chinchi', 'Chinpo', 'Panties', 'Panty shot', 'LEWD', 'Lewd', 'lood'];
 
 if (message.author.bot) return;
-    
+    } else
 if( swearWords.some(word => message.content.includes(word)) ) {
   const lewd1 = {
   "embed": {
