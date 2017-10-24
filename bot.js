@@ -81,31 +81,34 @@ message.channel.sendMessage({ embed });;
 
 client.on("message", message => {
     if (message.content === (config.prefix + "hug")) {
+
+          
    const embed1 = {
   "image": {
     "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif"
   }
-};
+}
            const embed2 = {
   "image": {
     "url": "https://media.tenor.com/images/42922e87b3ec288b11f59ba7f3cc6393/tenor.gif"
   }
-};
+}
            const embed3 = {
   "image": {
     "url": "https://78.media.tumblr.com/e790af0168cd80394b7d792dde07407b/tumblr_o76qfcMiFn1sk1rjvo1_500.gif"
   }
-};
+}
            const embed4 = {
   "image": {
     "url": "http://i.imgur.com/p7beIyD.gif"
   }
-};
+}
            const embed5 = {
   "image": {
     "url": "https://i.pinimg.com/originals/bf/b5/be/bfb5bed89f8c09bf53eab687eb3f9404.gif"
-          }};
+          }}
         
+            const rng = {(math.floor((Math.random() * 5) +1))};
 if (rng === 1) {message.channel.sendMessage({ embed1 });
 } else
     if (rng === 2) {message.channel.sendMessage({ embed2 });
