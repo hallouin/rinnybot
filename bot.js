@@ -38,7 +38,6 @@ client.on('message', message => {
     }
   ]
 }; 
-channel.send("GENERAL COMMANDS:", { embed });
     
     if (message.content === (config.prefix + 'help')) {
     message.author.sendMessage({ embed1 });
