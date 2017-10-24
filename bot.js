@@ -27,8 +27,21 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    const embed1 = {
+  "title": "`r!ping`",
+  "description": "Responds with `Pong desu!` Will include numerical value for ping (ms) soon.",
+  "color": 9059670,
+  "fields": [
+    {
+      "name": "`r!commands` , `r!command` , `r!help`",
+      "value": "Displays a list of commands available for use with Rinnybot."
+    }
+  ]
+}; 
+channel.send("GENERAL COMMANDS:", { embed });
+    
     if (message.content === (config.prefix + 'help')) {
-    message.channel.sendMessage('Under construction now (ᴗ˳ᴗ)｡｡｡zzz');
+    message.author.sendMessage({ embed1 });
   } 
     
 });
