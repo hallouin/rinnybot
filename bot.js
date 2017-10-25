@@ -222,12 +222,12 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     if (rng === 1) {
     message.channel.sendMessage({ embed });
     } else if (rng === 2) {
-    message.channel.sendMessage({ embed });
+    message.channel.sendMessage({ embed2 });
     } else if (rng === 3) {
-    message.channel.sendMessage({ embed });
+    message.channel.sendMessage({ embed3 });
     }
 
-}
+};
 
 client.on('message', message => {
     if (message.author.bot) return;
