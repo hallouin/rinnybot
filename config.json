@@ -2,5 +2,4 @@
   "token": "process.env.BOT_TOKEN",
   "adminID": "251581110176186378",
   "prefix": "r!",
-  "passes" : 1
 }
