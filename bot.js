@@ -15,11 +15,15 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
 const embed = {
-  "title": "`r!ping`",
-  "description": "Responds with `Pong desu!` Will include numerical value for ping (ms) soon.",
+  "title": "Rinnybot List of Commands",
+  "description": "More commands will be added soon! Please keep checking!",
   "color": 9059670,
   "fields": [
     {
+      "name": "`r!ping`",
+      "value": "Responds with `Pong desu!` Will include numerical value for ping (ms) soon."
+    },
+      {
       "name": "`r!commands` , `r!command` , `r!help`",
       "value": "Displays a list of commands available for use with Rinnybot."
     },
@@ -50,7 +54,7 @@ const embed = {
   ]
 
 };
-    message.reply("No problem! I've send you a DM.")
+    message.delete(100)
     message.author.sendMessage("Here are my list of commands!", { embed }); 
 } 
 });
@@ -93,7 +97,7 @@ const embed = {
   ]
 
 };
-    message.reply("No problem! I've send you a DM.")
+    message.delete(100)
     message.author.sendMessage("Here are my list of commands!", { embed }); 
 } 
 });
@@ -136,7 +140,7 @@ client.on('message', message => {
   ]
 
 };
-    message.reply("No problem! I've send you a DM.")
+    message.delete(100)
     message.author.sendMessage("Here are my list of commands!", { embed }); 
 } 
 });
@@ -203,37 +207,16 @@ message.channel.sendMessage({ embed });
 
 client.on('message', message => {
 const swearWords = ["r!hug"];
-    
 if( swearWords.some(word => message.content.includes(word)) ) {
-  
-   var rng = (math.floor((Math.random()*3)+1));
-  
    const embed = {
   "image": {
     "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif"
-  }};
-          
-  const embed2 = {
-  "image": {
-    "url": "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif"
-  }};
-          
-  const embed3 = {
-  "image": {
-    "url": "https://m.popkey.co/fca5d5/bXDgV.gif"
   }
 };
-          
-    if (rng === 1) {
-    message.channel.sendMessage({ embed });
-    } else if (rng === 2) {
-    message.channel.sendMessage({ embed2 });
-    } else if (rng === 3) {
-    message.channel.sendMessage({ embed3 });
-    }
-                                }
-
-                                });
+message.channel.sendMessage({ embed });
+}
+    
+});
 
 client.on('message', message => {
     if (message.author.bot) return;
