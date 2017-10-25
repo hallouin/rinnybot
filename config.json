@@ -1,4 +1,6 @@
 {
   "token": "process.env.BOT_TOKEN",
-  "prefix": "r!"
+  "adminID": "251581110176186378",
+  "prefix": "r!",
+  "passes" : 1
 }
