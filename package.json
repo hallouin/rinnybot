@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "discord.js": "11.1.0",
-    "ytdl-core" :  "github:fent/node-ytdl-core#master",
+    "ytdl-core": "^0.7.21",
     "node-opus" : "^0.2.1",
-    "request": "2.81.0"
-  }
+    "request": "2.79.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
 }
