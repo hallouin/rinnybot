@@ -203,7 +203,7 @@ message.channel.sendMessage({ embed });
 
 client.on('message', message => {
 const swearWords = ["r!hug"];
-    const rng = (math.floor((Math.random()*10)+1));
+const rng = (math.floor((Math.random()*3)+1));
     
 if( swearWords.some(word => message.content.includes(word)) ) {
    const embed = {
