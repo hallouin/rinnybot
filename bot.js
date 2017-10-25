@@ -15,15 +15,11 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
 const embed = {
-  "title": "Rinnybot List of Commands",
-  "description": "More commands will be added soon! Please keep checking!",
+  "title": "`r!ping`",
+  "description": "Responds with `Pong desu!` Will include numerical value for ping (ms) soon.",
   "color": 9059670,
   "fields": [
     {
-      "name": "`r!ping`",
-      "value": "Responds with `Pong desu!` Will include numerical value for ping (ms) soon."
-    },
-      {
       "name": "`r!commands` , `r!command` , `r!help`",
       "value": "Displays a list of commands available for use with Rinnybot."
     },
@@ -54,7 +50,7 @@ const embed = {
   ]
 
 };
-    message.delete(100)
+    message.reply("No problem! I've send you a DM.")
     message.author.sendMessage("Here are my list of commands!", { embed }); 
 } 
 });
@@ -97,7 +93,7 @@ const embed = {
   ]
 
 };
-    message.delete(100)
+    message.reply("No problem! I've send you a DM.")
     message.author.sendMessage("Here are my list of commands!", { embed }); 
 } 
 });
@@ -140,7 +136,7 @@ client.on('message', message => {
   ]
 
 };
-    message.delete(100)
+    message.reply("No problem! I've send you a DM.")
     message.author.sendMessage("Here are my list of commands!", { embed }); 
 } 
 });
