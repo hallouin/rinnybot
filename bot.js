@@ -226,8 +226,9 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     } else if (rng === 3) {
     message.channel.sendMessage({ embed3 });
     }
+                                }
 
-};
+                                });
 
 client.on('message', message => {
     if (message.author.bot) return;
