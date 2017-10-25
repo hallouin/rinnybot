@@ -86,13 +86,14 @@ const commands = {
 	}
 };
 
+client.on('ready', () => {
+    console.log('Rinnybot is here!');
+});
+
+
 client.on('message', message => {
 	if (!msg.content.startsWith(config.prefix)) return;
 	if (commands.hasOwnProperty(msg.content.toLowerCase().slice(config.prefix.length).split(' ')[0])) commands[msg.content.toLowerCase().slice(config.prefix.length).split(' ')[0]](msg);
-});
-
-client.on('ready', () => {
-    console.log('Rinnybot is here!');
 });
 
 client.on('message', message => {
