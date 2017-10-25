@@ -83,7 +83,7 @@ const commands = {
 	'reboot': (msg) => {
 		if (msg.author.id == config.adminID) process.exit(); //Requires a node module like Forever to work.
 	}
-};
+});
 
 client.on('ready', () => {
     console.log('Rinnybot is here!');
