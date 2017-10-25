@@ -206,7 +206,7 @@ const swearWords = ["r!hug"];
     
 if( swearWords.some(word => message.content.includes(word)) ) {
   
-   const rng = (math.floor((Math.random()*3)+1));
+   var rng = (math.floor((Math.random()*3)+1));
   
    const embed = {
   "image": {
