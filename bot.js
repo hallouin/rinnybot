@@ -50,7 +50,7 @@ const embed = {
   ]
 
 };
-    message.delete(100)
+    message.reply("No problem! I've send you a DM.")
     message.author.sendMessage("Here are my list of commands!", { embed }); 
 } 
 });
@@ -93,7 +93,7 @@ const embed = {
   ]
 
 };
-    message.delete(100)
+    message.reply("No problem! I've send you a DM.")
     message.author.sendMessage("Here are my list of commands!", { embed }); 
 } 
 });
@@ -136,8 +136,7 @@ client.on('message', message => {
   ]
 
 };
-    message.delete(100)
-        message.channel.sendMessage("Got you!")
+    message.reply("No problem! I've send you a DM.")
     message.author.sendMessage("Here are my list of commands!", { embed }); 
 } 
 });
