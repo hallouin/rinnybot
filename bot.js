@@ -203,13 +203,29 @@ message.channel.sendMessage({ embed });
 
 client.on('message', message => {
 const swearWords = ["r!hug"];
+    const rng = (math.floor((Math.random()*10)+1));
+    
 if( swearWords.some(word => message.content.includes(word)) ) {
    const embed = {
   "image": {
     "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif"
   }
+       const embed2 = {
+  "image": {
+    "url": "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif"
+  }
+   const embed3 = {
+  "image": {
+    "url": "https://m.popkey.co/fca5d5/bXDgV.gif"
+  }
 };
-message.channel.sendMessage({ embed });
+    if (rng === 1) {
+    message.channel.sendMessage({ embed });
+    } else if (rng === 2) {
+    message.channel.sendMessage({ embed });
+    } else if (rng === 3) {
+    message.channel.sendMessage({ embed });
+    }
 }
     
 });
