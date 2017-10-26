@@ -208,23 +208,11 @@ if (message.content.startsWith(config.prefix + 'hug')) {
 const rng = Math.floor(Math.random()*3)+1;
 
     if (rng === 1) {
-message.channel.sendMessage({
-  "image": {
-    "url": "http://data.whicdn.com/images/82274594/original.gif"
-  }
-});
+message.channel.sendMessage(1);
     } else if (rng === 2) {
-message.channel.sendMessage({
-  "image": {
-    "url": "http://data.whicdn.com/images/82274594/original.gif"
-  }
-});
+message.channel.sendMessage(2);
     } else if (rng === 3) {
-message.channel.sendMessage({
-  "image": {
-    "url": "http://data.whicdn.com/images/82274594/original.gif"
-  }
-});
+message.channel.sendMessage(3);
     }
 }
 });
