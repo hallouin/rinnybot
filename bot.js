@@ -214,10 +214,8 @@ const embed1 = {
 
     if (rng === 1) {
 message.channel.sendMessage({ embed1 });
-    } else if (rng === 2) {
-message.channel.sendMessage({ embed1 });
-    } else if (rng === 3) {
-message.channel.sendMessage({ embed1 });
+    } else if (rng !== 1) {
+message.channel.sendMessage("Working on it!");
     }
 }
 });
