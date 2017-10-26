@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'ping')) {
-    message.channel.sendMessage({${Date.now() - message.createdTimestamp}} + `\`${Date.now() - message.createdTimestamp} ms\``);
+    message.channel.sendMessage((${Date.now() - message.createdTimestamp}) + `\`${Date.now() - message.createdTimestamp} ms\``);
   }
 });
 
