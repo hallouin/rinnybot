@@ -206,18 +206,14 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + 'hug')) {
 
 const rng = Math.floor(Math.random()*3)+1;
-const imageArray = ["http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif", "https://m.popkey.co/fca5d5/bXDgV.gif"]
+const imageArray = ["http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif", "https://m.popkey.co/fca5d5/bXDgV.gif"];
 const embed = {
   "image": {
-    "url": "imageArray"
+    "url": (imageArray[rng])
 }
 };
 
-    if (rng === 1) {
 message.channel.sendMessage({ embed });
-    } else if (rng !== 1) {
-message.channel.sendMessage("Working on it!");
-    }
 }
 });
 
