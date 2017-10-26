@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
+const yt = require('ytdl-core');
 
 client.on('ready', () => {
     console.log('Rinnybot is here!');
@@ -8,7 +9,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'ping')) {
-    message.channel.sendMessage('Pong desu!');
+    message.channel.sendMessage('Pong desu! ${Date.now() - message.createdTimestamp} ms.');
   }
 });
 
