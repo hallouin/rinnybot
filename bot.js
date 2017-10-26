@@ -220,7 +220,9 @@ message.channel.sendMessage("You got a hug from " + message.author.username + "!
 client.on('message', message => {
     if (message.author.bot) return;
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd', 'Hentai', 'HENTAI', 'Ochinchin', 'OCHINCHIN', 'Oppai', 'OPPAI', 'Boku no Pico', 'BOKU NO PICO', 'Boku no pico', 'Ecchi', 'ECCHI', 'panty shot', 'PANTIES', 'PANTY SHOT', 'LEWD', 'LOOD', 'Lewd', 'Lood'];
-if( swearWords.some(word => message.content.includes(word)) ) {const imageArray = ["https://i.imgur.com/qknrvCO.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-8-1.gif", "https://media.giphy.com/media/xnmArcgSzKbo4/giphy.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-6-1.gif", "https://i.imgur.com/SaGnoAr.gif", "http://i0.kym-cdn.com/photos/images/original/000/746/820/fed.gif"];
+if( swearWords.some(word => message.content.includes(word)) ) {
+    const rng = Math.floor(Math.random()*6)+1;
+    const imageArray = ["https://i.imgur.com/qknrvCO.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-8-1.gif", "https://media.giphy.com/media/xnmArcgSzKbo4/giphy.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-6-1.gif", "https://i.imgur.com/SaGnoAr.gif", "http://i0.kym-cdn.com/photos/images/original/000/746/820/fed.gif"];
 const embed = {
   "image": {
     "url": (imageArray[rng])
