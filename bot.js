@@ -278,7 +278,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 }
 };
 
-    message.reply("I love you too! ♡", { embed });
+    message.reply("I love you too! ♡ (⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄", { embed });
 }
     
 });
