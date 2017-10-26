@@ -202,16 +202,15 @@ message.channel.sendMessage({ embed });
 });
 
 client.on('message', message => {
-const swearWords = ["r!hug"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-   const embed = {
-  "image": {
-    "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif"
-  }
-};
-message.channel.sendMessage({ embed });
-}
     
+if (message.content.startsWith(config.prefix + 'hug')) {
+
+  const imagesArray = [{ image:"http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif" }];
+
+const rng = imagesArray[Math.floor(Math.random()*3)+1];
+
+message.channel.sendMessage(rng);
+}
 });
 
 client.on('message', message => {
