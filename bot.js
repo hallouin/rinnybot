@@ -215,7 +215,7 @@ const image1 = (
 );
 
     if (rng === 1) {
-message.channel.sendMessage({ image1 });
+message.channel.sendMessage(image1);
     } else if (rng !== 1) {
 message.channel.sendMessage("Working on it!");
     }
