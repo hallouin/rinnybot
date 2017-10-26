@@ -205,15 +205,15 @@ client.on('message', message => {
     
 if (message.content.startsWith(config.prefix + 'hug')) {
 
-const rng = Math.floor(Math.random()*3)+1;
-const imageArray = ["http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif", "https://m.popkey.co/fca5d5/bXDgV.gif"];
+const rng = Math.floor(Math.random()*6)+1;
+const imageArray = ["http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif", "https://m.popkey.co/fca5d5/bXDgV.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-19.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-12.gif", "https://myanimelist.cdn-dena.com/s/common/uploaded_files/1460988091-6e86cd666a30fcc1128c585c82a20cdd.gif"];
 const embed = {
   "image": {
     "url": (imageArray[rng])
 }
 };
 
-message.channel.sendMessage({ embed });
+message.channel.sendMessage("You gut a hug from" + author, { embed });
 }
 });
 
