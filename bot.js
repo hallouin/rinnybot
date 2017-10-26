@@ -205,7 +205,7 @@ client.on('message', message => {
     
 if (message.content.startsWith(config.prefix + 'hug')) {
 
-const imagesArray = [{ image:"http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif" }];
+const imagesArray = [{ image: 'http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif' }];
 
 const rng = Math.floor(Math.random()*3)+1;
 
