@@ -205,12 +205,8 @@ client.on('message', message => {
     
 if (message.content.startsWith(config.prefix + 'hug')) {
 
-  const imagesArray = [{ image:"http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif" }];
-const 1 = {
-  "image": {
-    "url": "https://i.imgur.com/XoYgHyi.gif"
-  }
-};
+const imagesArray = [{ image:"http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif" }];
+
 const rng = Math.floor(Math.random()*1)+1;
 
 message.channel.sendMessage(rng);
