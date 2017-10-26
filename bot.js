@@ -222,7 +222,7 @@ const embed3 = {
   }
 };    
     
-message.channel.sendMessage({ embed(rng) });
+message.channel.sendMessage({ embed1 });
     }
 }
 });
