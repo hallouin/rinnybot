@@ -205,9 +205,9 @@ client.on('message', message => {
     
 if (message.content.startsWith(config.prefix + 'hug')) {
 
-var imagesArray = [{ image:"https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif" }, { image:"http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif" }, { image:"https://m.popkey.co/fca5d5/bXDgV.gif" }];
+const imagesArray = [{ image:"https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif" }, { image:"http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif" }, { image:"https://m.popkey.co/fca5d5/bXDgV.gif" }];
 
-var rng = imagesArray[(math.floor(math.random()*3)+1)];
+const rng = imagesArray[math.floor(math.random()*imagesArray.length)];
 
 message.channel.sendMessage(rng);
 }
@@ -222,6 +222,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     "url": "https://i.imgur.com/XoYgHyi.gif"
   }
 };
+   
 message.channel.sendMessage("Lewd desu!", { embed });
 }
     
