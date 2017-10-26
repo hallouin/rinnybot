@@ -209,7 +209,7 @@ if (message.content.startsWith(config.prefix + 'hug')) {
 
 const rng = Math.floor(Math.random()*1)+1;
 
-message.channel.sendMessage(imagesArray[rng]);
+message.channel.sendMessage(imagesArray[1]);
 }
 });
 
