@@ -223,7 +223,7 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + 'pat')) {
 
 const rng = Math.floor(Math.random()*6)+1;
-const imageArray = ["https://m.popkey.co/a5cfaf/1x6lW.gif", "http://i.imgur.com/eOJlnwP.gif", "https://media.tenor.com/images/bf646b7164b76efe82502993ee530c78/tenor.gif", "https://media.tenor.com/images/f79a9ec48bde0e592e55447b17ecfbad/tenor.gif", "http://data.whicdn.com/images/88714749/original.gif", "https://pa1.narvii.com/6390/a7cdeac333cc02e456f8851cb3ea70dc6306cc1f_hq.gif"];
+const imageArray = ["http://cdn-ak.f.st-hatena.com/images/fotolife/p/pema/20121222/20121222134229.gif", "http://i.imgur.com/eOJlnwP.gif", "https://media.tenor.com/images/bf646b7164b76efe82502993ee530c78/tenor.gif", "https://media.tenor.com/images/f79a9ec48bde0e592e55447b17ecfbad/tenor.gif", "http://data.whicdn.com/images/88714749/original.gif", "https://pa1.narvii.com/6390/a7cdeac333cc02e456f8851cb3ea70dc6306cc1f_hq.gif"];
 const embed = {
   "image": {
     "url": (imageArray[rng])
@@ -270,10 +270,12 @@ client.on('message', message => {
         if (message.author.bot) return;
 const swearWords = ["i love rinnybot", "I love rinnybot", "I love rinny bot", "i love rinny bot", "I love Rinnybot", "i love Rinnybot", "I LOVE RINNYBOT", "i love you rinnybot", "I LOVE YOU RINNYBOT", "we love you rinnybot", "we love rinnybot", "I love @Rinnybot", "i love @Rinnybot"];
 if( swearWords.some(word => message.content.includes(word)) ) {
-   const embed = {
+   const rng = Math.floor(Math.random()*6)+1;
+   const imageArray = ["http://i.imgur.com/8UNPSqN.gif", "https://i.pinimg.com/originals/60/bd/28/60bd28e041d83ed07ac88e00d30843d5.gif", "https://i.pinimg.com/originals/0b/a4/d9/0ba4d92a005c69ef3bd6254c423ef4a5.gif", "https://i.pinimg.com/originals/01/e2/ea/01e2eabe71ba07db14a50878bc7ac20d.gif", "http://data.whicdn.com/images/225809250/original.gif"];
+    const embed = {
   "image": {
-    "url": "http://data.whicdn.com/images/91721621/original.gif"
-  }
+    "url": (imageArray[rng])
+}
 };
 
     message.reply("I love you too! ♡", { embed });
