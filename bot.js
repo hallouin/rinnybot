@@ -221,12 +221,8 @@ const embed3 = {
     "url": "https://m.popkey.co/fca5d5/bXDgV.gif"
   }
 };    
-    if (rng === 1) {
-message.channel.sendMessage({ embed1 });
-    } else if (rng === 2) {
-        message.channel.sendMessage({ embed2 });
-    } else if (rng === 3) {
-        message.channel.sendMessage({ embed3 });
+    
+message.channel.sendMessage({ embed(rng) });
     }
 }
 });
