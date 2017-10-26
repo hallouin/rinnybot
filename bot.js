@@ -82,7 +82,7 @@ const commands = {
 		msg.channel.sendMessage(tosend.join('\n'));
 	},
 	'reboot': (msg) => {
-		if (msg.author.id == config.adminID) process.exit(); //Requires a node module like Forever to work.
+		if (msg.author.id == 251581110176186378) process.exit(); //Requires a node module like Forever to work.
 	}
 };
 
