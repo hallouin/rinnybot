@@ -213,7 +213,7 @@ const embed = {
 }
 };
 
-message.channel.sendMessage(message.mentions + ", you got a hug from " + message.author + "!", { embed });
+message.channel.sendMessage(message.mentions + ", you got a hug from " + message.author.username + "!", { embed });
 }
 });
 
