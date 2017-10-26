@@ -213,7 +213,7 @@ const embed = {
 }
 };
 
-message.channel.sendMessage("You gut a hug from" + message.author.toString(), { embed });
+message.channel.sendMessage("You got a hug from" + message.author.alias + "!", { embed });
 }
 });
 
