@@ -236,7 +236,7 @@ message.channel.sendMessage("You were patted by " + message.author.username + "!
 
 client.on('message', message => {
     
-if (message.content.startsWith(config.prefix + 'pat')) {
+if (message.content.startsWith(config.prefix + 'poke')) {
 
 const rng = Math.floor(Math.random()*6)+1;
 const imageArray = ["https://i.pinimg.com/originals/e5/bd/ea/e5bdea33daa43791fb17f8575c059779.gif", "https://i.pinimg.com/originals/bf/55/12/bf55122ccfae1e283ceafea81657aa43.gif", "http://gifimage.net/wp-content/uploads/2017/08/poke-gif-16.gif", "https://i.pinimg.com/originals/ec/d5/db/ecd5db48f5bdfb9b67f86f2094554839.gif", "https://33.media.tumblr.com/66980aebf476906cdeaef32948ead3b5/tumblr_mibugnXqaz1rx1dfqo1_500.gif"];
@@ -256,7 +256,7 @@ const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'ch
 if( swearWords.some(word => message.content.includes(word)) ) {
     const rng = Math.floor(Math.random()*6)+1;
     const imageArray = ["https://anime4fun299.files.wordpress.com/2014/12/trinity-seven-episode-9-1.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-8-1.gif", "http://i0.kym-cdn.com/photos/images/original/000/994/901/67a.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-6-1.gif", "https://i.imgur.com/SaGnoAr.gif", "http://i0.kym-cdn.com/photos/images/original/000/746/820/fed.gif"];
-const embed = {
+    const embed = {
   "image": {
     "url": (imageArray[rng])
 }
@@ -267,14 +267,16 @@ message.channel.sendMessage("Lewd desu!", { embed });
 });
 
 client.on('message', message => {
+        if (message.author.bot) return;
 const swearWords = ["i love rinnybot", "I love rinnybot", "I love rinny bot", "i love rinny bot", "I love Rinnybot", "i love Rinnybot", "I LOVE RINNYBOT", "i love you rinnybot", "I LOVE YOU RINNYBOT", "we love you rinnybot", "we love rinnybot", "I love @Rinnybot", "i love @Rinnybot"];
 if( swearWords.some(word => message.content.includes(word)) ) {
-const embed = {
+   const embed = {
   "image": {
     "url": "http://data.whicdn.com/images/91721621/original.gif"
-}
+  }
 };
-    message.reply("I love you too! ♡");
+
+    message.reply("I love you too! ♡", { embed });
 }
     
 });
