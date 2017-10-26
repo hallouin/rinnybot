@@ -206,14 +206,16 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + 'hug')) {
 
 const rng = Math.floor(Math.random()*3)+1;
-const embed = {
+constr image1 = {
+    const embed = {
   "image": {
     "url": "http://data.whicdn.com/images/82274594/original.gif"
   }
 };
+}
 
     if (rng === 1) {
-message.channel.sendMessage({ embed });
+message.channel.sendMessage({ image1 });
     } else if (rng !== 1) {
 message.channel.sendMessage("Working on it!");
     }
