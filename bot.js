@@ -209,7 +209,7 @@ const imagesArray = [{ image:"http://gifimage.net/wp-content/uploads/2017/06/ani
 
 const rng = Math.floor(Math.random()*3)+1;
 
-message.channel.sendMessage(rng);
+message.channel.sendMessage(imagesArray[1]);
 }
 });
 
