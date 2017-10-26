@@ -207,7 +207,7 @@ if (message.content.startsWith(config.prefix + 'hug')) {
 
 const imagesArray = [{"image": { "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif" }}, {"image": { "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif" }}, {"image": { "url": "https://media.tenor.com/images/08de7ad3dcac4e10d27b2c203841a99f/tenor.gif" }}];
 
-const rng = imagesArray[math.floor(math.random()*(imagesArray.length))];
+const rng = math.floor(math.random()*(imagesArray.length));
 
 message.channel.sendMessage(rng);
 }
