@@ -205,7 +205,7 @@ client.on('message', message => {
     
 if (message.content.startsWith(config.prefix + 'hug')) {
 
-const rng = math.floor(math.random()*(3)+1);
+const rng = Math.floor(Math.random()*3)+1;
 
 message.channel.sendMessage(rng);
 }
