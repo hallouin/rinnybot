@@ -205,9 +205,7 @@ client.on('message', message => {
     
 if (message.content.startsWith(config.prefix + 'hug')) {
 
-const imagesArray = [{ image: 'http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif' }];
-
-const rng = Math.floor(Math.random()*1)+1;
+const rng = Math.floor(Math.random()*3)+1;
 
     if rng === 1 {
 message.channel.sendMessage({
@@ -215,7 +213,19 @@ message.channel.sendMessage({
     "url": "http://data.whicdn.com/images/82274594/original.gif"
   }
 });
-    } 
+    } else if rng === 2 {
+message.channel.sendMessage({
+  "image": {
+    "url": "http://data.whicdn.com/images/82274594/original.gif"
+  }
+});
+    } else if rng === 3 {
+message.channel.sendMessage({
+  "image": {
+    "url": "http://data.whicdn.com/images/82274594/original.gif"
+  }
+});
+    }
 }
 });
 
