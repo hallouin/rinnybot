@@ -206,7 +206,7 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + 'hug')) {
 
 const rng = Math.floor(Math.random()*3)+1;
-const embed1 = {
+const 1 = {
   "image": {
     "url": "http://data.whicdn.com/images/82274594/original.gif"
   }
@@ -222,11 +222,11 @@ const embed1 = {
   }
 };
     if (rng === 1) {
-message.channel.sendMessage({ embed1 });
+message.channel.sendMessage({ 1 });
     } else if (rng === 2) {
-message.channel.sendMessage({ embed2 });
+message.channel.sendMessage({ 1 });
     } else if (rng === 3) {
-message.channel.sendMessage({ embed3 });
+message.channel.sendMessage({ 1 });
     }
 }
 });
