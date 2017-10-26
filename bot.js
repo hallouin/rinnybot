@@ -219,14 +219,46 @@ message.channel.sendMessage("You got a hug from " + message.author.username + "!
 });
 
 client.on('message', message => {
+    
+if (message.content.startsWith(config.prefix + 'pat')) {
+
+const rng = Math.floor(Math.random()*6)+1;
+const imageArray = ["https://m.popkey.co/a5cfaf/1x6lW.gif", "http://i.imgur.com/eOJlnwP.gif", "https://media.tenor.com/images/bf646b7164b76efe82502993ee530c78/tenor.gif", "https://media.tenor.com/images/f79a9ec48bde0e592e55447b17ecfbad/tenor.gif", "http://data.whicdn.com/images/88714749/original.gif", "https://pa1.narvii.com/6390/a7cdeac333cc02e456f8851cb3ea70dc6306cc1f_hq.gif"];
+const embed = {
+  "image": {
+    "url": (imageArray[rng])
+}
+};
+
+message.channel.sendMessage("You were patted by " + message.author.username + "!", { embed });
+}
+});
+
+client.on('message', message => {
+    
+if (message.content.startsWith(config.prefix + 'pat')) {
+
+const rng = Math.floor(Math.random()*6)+1;
+const imageArray = ["https://i.pinimg.com/originals/e5/bd/ea/e5bdea33daa43791fb17f8575c059779.gif", "https://i.pinimg.com/originals/bf/55/12/bf55122ccfae1e283ceafea81657aa43.gif", "http://gifimage.net/wp-content/uploads/2017/08/poke-gif-16.gif", "https://i.pinimg.com/originals/ec/d5/db/ecd5db48f5bdfb9b67f86f2094554839.gif", "https://33.media.tumblr.com/66980aebf476906cdeaef32948ead3b5/tumblr_mibugnXqaz1rx1dfqo1_500.gif"];
+const embed = {
+  "image": {
+    "url": (imageArray[rng])
+}
+};
+
+message.channel.sendMessage("You were poked by " + message.author.username + "!", { embed });
+}
+});
+
+client.on('message', message => {
     if (message.author.bot) return;
 const swearWords = ["hentai", "ochinchin", "oppai", "boku no pico", "ecchi", 'chinchin', 'chinpo', 'panties', 'pantyshot', 'lewd', 'Hentai', 'HENTAI', 'Ochinchin', 'OCHINCHIN', 'Oppai', 'OPPAI', 'Boku no Pico', 'BOKU NO PICO', 'Boku no pico', 'Ecchi', 'ECCHI', 'panty shot', 'PANTIES', 'PANTY SHOT', 'LEWD', 'LOOD', 'Lewd', 'Lood'];
 if( swearWords.some(word => message.content.includes(word)) ) {
     const rng = Math.floor(Math.random()*6)+1;
-    const imageArray = ["https://i.imgur.com/qknrvCO.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-8-1.gif", "https://media.giphy.com/media/xnmArcgSzKbo4/giphy.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-6-1.gif", "https://i.imgur.com/SaGnoAr.gif", "http://i0.kym-cdn.com/photos/images/original/000/746/820/fed.gif"];
+    const imageArray = ["https://anime4fun299.files.wordpress.com/2014/12/trinity-seven-episode-9-1.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-8-1.gif", "http://i0.kym-cdn.com/photos/images/original/000/994/901/67a.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-6-1.gif", "https://i.imgur.com/SaGnoAr.gif", "http://i0.kym-cdn.com/photos/images/original/000/746/820/fed.gif"];
 const embed = {
   "image": {
-    "url": (imageArray[rng])
+    "url": "http://data.whicdn.com/images/91721621/original.gif"
 }
 };
 
@@ -235,60 +267,18 @@ message.channel.sendMessage("Lewd desu!", { embed });
 });
 
 client.on('message', message => {
-const swearWords = ["i love rinnybot"];
+const swearWords = ["i love rinnybot", "I love rinnybot", "I love rinny bot", "i love rinny bot", "I love Rinnybot", "i love Rinnybot", "I LOVE RINNYBOT", "i love you rinnybot", "I LOVE YOU RINNYBOT", "we love you rinnybot", "we love rinnybot", "I love @Rinnybot", "i love @Rinnybot"];
 if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("I love you too! ♡");
+const embed = {
+  "image": {
+    "url": (imageArray[rng])
+}
+};
+    message.reply("I love you too! ♡");
 }
     
 });
 
-client.on('message', message => {
-const swearWords = ["I love rinnybot"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("I love you too! ♡");
-}
-    
-});
-
-client.on('message', message => {
-const swearWords = ["i love Rinnybot"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("I love you too! ♡");
-}
-    
-});
-
-client.on('message', message => {
-const swearWords = ["I love Rinnybot"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("I love you too! ♡");
-}
-    
-});
-
-client.on('message', message => {
-const swearWords = ["I LOVE RINNYBOT"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("I love you too! ♡");
-}
-    
-});
-
-client.on('message', message => {
-const swearWords = ["I LOVE YOU RINNYBOT"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("I love you too! ♡");
-}
-    
-});
-
-client.on('message', message => {
-const swearWords = ["i love you rinnybot"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("I love you too! ♡");
-}
-    
-});
 
 client.on('message', message => {
 const lenny = ["r!lenny"];
