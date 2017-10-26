@@ -207,11 +207,11 @@ if (message.content.startsWith(config.prefix + 'hug')) {
 
 const rng = Math.floor(Math.random()*3)+1;
 const image1 = (
-    const embed = {
+   embed = {
   "image": {
     "url": "http://data.whicdn.com/images/82274594/original.gif"
   }
-};
+}
 );
 
     if (rng === 1) {
