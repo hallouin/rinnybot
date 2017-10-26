@@ -13,7 +13,6 @@ client.on('message', message => {
   }
 });
 
-
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
 const embed = {
