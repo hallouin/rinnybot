@@ -258,7 +258,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
     const imageArray = ["https://anime4fun299.files.wordpress.com/2014/12/trinity-seven-episode-9-1.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-8-1.gif", "http://i0.kym-cdn.com/photos/images/original/000/994/901/67a.gif", "http://gifimage.net/wp-content/uploads/2017/08/lewd-anime-gif-6-1.gif", "https://i.imgur.com/SaGnoAr.gif", "http://i0.kym-cdn.com/photos/images/original/000/746/820/fed.gif"];
 const embed = {
   "image": {
-    "url": "http://data.whicdn.com/images/91721621/original.gif"
+    "url": (imageArray[rng])
 }
 };
 
@@ -271,7 +271,7 @@ const swearWords = ["i love rinnybot", "I love rinnybot", "I love rinny bot", "i
 if( swearWords.some(word => message.content.includes(word)) ) {
 const embed = {
   "image": {
-    "url": (imageArray[rng])
+    "url": "http://data.whicdn.com/images/91721621/original.gif"
 }
 };
     message.reply("I love you too! ♡");
