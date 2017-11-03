@@ -291,7 +291,7 @@ if( message.content.startsWith(config.prefix + '8ball' ) {
 }
 };
 
-message.channel.sendMessage(response[rng]);
+message.channel.sendMessage("response[rng]");
 }
 });
 
