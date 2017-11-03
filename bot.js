@@ -285,7 +285,7 @@ if( swearWords.some(word => message.content.includes(word)) ) {
 
 client.on('message', message => {
     if (message.author.bot) return;
-if( message.content.startsWith(config.prefix + '8ball' ) {
+if( message.content.startsWith(config.prefix + '8ball' )) {
     const rng = Math.floor(Math.random()*12)+1;
     const response = ["Surely it is so!", "Yep!", "For sure!", "I'm not so sure...", "Probably not.", "Nope, definitely not.", "I'm sure of it!", "Perhaps if you tell me you love Rinnybot, then yes!", "I can't really tell right now.", "No no no nope", "Of course!", "I think it's better not to say..."];
 
