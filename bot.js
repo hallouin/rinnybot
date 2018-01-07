@@ -4,12 +4,6 @@ const config = require("./config.json");
 const yt = require('ytdl-core');
 const music = require('discord.js-music-v11');
 const token = "process.env.BOT_TOKEN"
-const commands = require('./commands');
-const ytdl = require('ytdl-core');
-const state = require('./utils/state');
-const { getVoiceChannel, getTextChannel, isAfk, tts } = require('./utils');
-
-const bot = state.client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('Rinnybot is here!');
