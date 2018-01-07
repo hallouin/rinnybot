@@ -155,7 +155,7 @@ message.channel.sendMessage("Yes!", { embed });
 });
 
 client.on('message', message => {
-    if (message.content === (config.prefix + 'yookey')) {
+    if (message.content === (config.prefix + 'yookey') || message.content === ('Rinny what is a dudele')) {
 message.channel.sendMessage("i dudeled my dude today but my brother dudeled on my dude and ruined the dudele of my dude im so same my dudel is messed up now but my other dude dudeled something for my dude i was dudeling so my dude is happy now, my other dude also dudeled me dudeling my dude so im good. i still miss my dudele but at least me and my dude and my other dude is happy from the dudeles my other dude dudeled. but yuki is going to dudele all of my dudes death so im sad again. im going to dudele all my dudes except for my waif dude yuki so i can make my dudes happy. i hope my brother doesnt dudele on my dudeles again, that would make my dudes and i so sad");
 }
     
