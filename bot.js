@@ -214,7 +214,7 @@ client.on('message', message => {
    
 const rng = Math.floor(Math.random()*6)+1;
     const user = message.mentions.members.first();
-    const botuser = message.author.bot
+    const botuser = <@371963227468464128>
     const selfuser = message.author.username
 const imageArray = ["http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif", "https://m.popkey.co/fca5d5/bXDgV.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-19.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-12.gif", "https://myanimelist.cdn-dena.com/s/common/uploaded_files/1460988091-6e86cd666a30fcc1128c585c82a20cdd.gif"];
 const embed = {
@@ -222,10 +222,8 @@ const embed = {
     "url": (imageArray[rng])
 }
 };
-    if (message.content.startsWith(config.prefix + 'hug') && message.content.includes(botuser) {
-    message.channel.sendMessage("thank you!")}
-    else if (message.content.startsWith(config.prefix + 'hug') && message.content.includes(selfuser) {
-        message.channel.sendMessage("You can't hug yourself!")}
+    if (message.content.startsWith(config.prefix + 'hug')) && (message.content.includes(botuser)) {
+    message.channel.sendMessage("thank you!")} 
         else if (message.content.startsWith(config.prefix + 'hug')) {
             
 message.channel.sendMessage(user + ", you got a hug from " + message.author.username + "!", { embed });
