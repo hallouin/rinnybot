@@ -222,9 +222,9 @@ const embed = {
     "url": (imageArray[rng])
 }
 };
-    if (message.content.startsWith(config.prefix + 'hug') && message.content.contains(user) && user == botuser) {
+    if (message.content.startsWith(config.prefix + 'hug') && message.content.includes(user) && user == botuser) {
     message.channel.sendMessage("thank you!")}
-    else if (message.content.startsWith(config.prefix + 'hug') && message.content.contains(user) && user == selfuser) {
+    else if (message.content.startsWith(config.prefix + 'hug') && message.content.includes(user) && user == selfuser) {
         message.channel.sendMessage("You can't hug yourself!")}
     else if (!message.content.contains(user)) return;
         else if (message.content.startsWith(config.prefix + 'hug')) {
