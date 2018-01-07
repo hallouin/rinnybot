@@ -279,9 +279,8 @@ const embed = {
 };
 
 message.channel.sendMessage("Here you go!", { embed });
-}
+};
 
-    
 else if (message.content.startsWith(config.prefix + 'poke') && !message.mentions.author) {
 
 const rng = Math.floor(Math.random()*6)+1;
