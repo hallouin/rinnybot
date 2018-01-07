@@ -214,6 +214,7 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + 'hug')) {
 
 const rng = Math.floor(Math.random()*6)+1;
+    const user = message.mentions.members.first();
 const imageArray = ["http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif", "https://m.popkey.co/fca5d5/bXDgV.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-19.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-12.gif", "https://myanimelist.cdn-dena.com/s/common/uploaded_files/1460988091-6e86cd666a30fcc1128c585c82a20cdd.gif"];
 const embed = {
   "image": {
@@ -221,7 +222,7 @@ const embed = {
 }
 };
 
-message.channel.sendMessage("You got a hug from " + message.author.username + "!", { embed });
+message.channel.sendMessage(user + " You got a hug from " + message.author.username + "!", { embed });
 }
 });
 
@@ -238,7 +239,7 @@ const embed = {
 }
 };
 
-message.channel.sendMessage(user + "You were patted by " + message.author.username + "!", { embed });
+message.channel.sendMessage(user + " You were patted by " + message.author.username + "!", { embed });
 }
 });
 
@@ -247,6 +248,7 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + 'poke')) {
 
 const rng = Math.floor(Math.random()*6)+1;
+    const user = message.mentions.members.first();
 const imageArray = ["https://k39.kn3.net/taringa/5/6/3/9/8/8/9/kukury/EF2.gif", "https://i.pinimg.com/originals/bf/55/12/bf55122ccfae1e283ceafea81657aa43.gif", "http://gifimage.net/wp-content/uploads/2017/08/poke-gif-16.gif", "https://i.pinimg.com/originals/ec/d5/db/ecd5db48f5bdfb9b67f86f2094554839.gif", "https://33.media.tumblr.com/66980aebf476906cdeaef32948ead3b5/tumblr_mibugnXqaz1rx1dfqo1_500.gif"];
 const embed = {
   "image": {
@@ -254,9 +256,11 @@ const embed = {
 }
 };
 
-message.channel.sendMessage("You were poked by " + message.author.username + "!", { embed });
+message.channel.sendMessage(user + " You were poked by " + message.author.username + "!", { embed });
 }
 });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 client.on('message', message => {
     if (message.author.bot) return;
