@@ -1,0 +1,29 @@
+{
+  "name": "Rinnybot",
+  "description": "Personal Rinnybot",
+  "repository": "https://github.com/hallouin/rinnybot",
+  "logo": "N/A",
+  "keywords": ["bot", "heroku", "music-playback", "discord", "javascript", "node", "youtube"],
+  "env": {
+    "MY_VAR_DISCORD": {
+      "description": "Discord token used to log in",
+      "required": true
+    },
+    "MY_VAR_OPENWEATHERMAP": {
+      "description": "c2ded55902e8f83562d39231f0632a5f",
+      "required": false
+    },
+    "MY_VAR_YOUTUBE": {
+      "description": "AIzaSyA7ChCy_ygNd3jtsHcS_MnMeZks7OUrbPo",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    },
+    {
+      "url": "https://github.com/issueapp/heroku-buildpack-ffmpeg"
+    }
+  ]
+}
