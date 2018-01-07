@@ -224,7 +224,9 @@ const embed = {
 };
 
     if (user == message.author.bot) {
-        message.channel.sendMessage("thank you!")};
+        message.channel.sendMessage("thank you!")} else 
+            if (user == message.author.username) {
+                message.channel.sendMessage("You can't hug yourself!")} else
     
 message.channel.sendMessage(user + " You got a hug from " + message.author.username + "!", { embed });
 }
