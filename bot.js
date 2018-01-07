@@ -144,15 +144,14 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'yes')) {
-   const embed = {
+
+const rng = Math.floor(Math.random()*6)+1;
+const imageArray = ["https://pa1.narvii.com/6610/893c3894c20556d9f8d0b10f939eb1605bf44285_hq.gif", "https://media.giphy.com/media/gszUaOOy8kTBe/giphy.gif", "https://thumbs.gfycat.com/ImaginativeSecondhandDuck-max-1mb.gif", "https://78.media.tumblr.com/d5606ea307eed8b18103e9f7b6baa0a1/tumblr_ooes5htBGp1tydz8to1_500.gif", "http://i0.kym-cdn.com/photos/images/original/001/155/275/559.gif", "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjuyOmF38TYAhUG7SYKHRFeAtAQjBwIBA&url=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2FWXaIXuvjRF46k%2Fgiphy.gif&psig=AOvVaw1E7WfNGzmpu0shoEZwqsaz&ust=1515376260182517"];
+const embed = {
   "image": {
-    "url": "http://25.media.tumblr.com/tumblr_mbqui4CyUm1riu78lo1_500.gif"
-  }
-};
-message.channel.sendMessage("Yes!", { embed });
+    "url": (imageArray[rng])
 }
-    
-});
+};
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'yookey') || message.content == (config.prefix + 'dudele') || message.content === ('Rinny what is a dudele') || message.content == ('Rinny what did yookey say')) {
@@ -278,7 +277,7 @@ client.on('message', message => {
 const swearWords = ["i love rinnybot", "I love rinnybot", "I love rinny bot", "i love rinny bot", "I love Rinnybot", "i love Rinnybot", "I LOVE RINNYBOT", "i love you rinnybot", "I LOVE YOU RINNYBOT", "we love you rinnybot", "we love rinnybot", "I love @Rinnybot", "i love @Rinnybot"];
 if( swearWords.some(word => message.content.includes(word)) ) {
    const rng = Math.floor(Math.random()*6)+1;
-   const imageArray = ["http://i.imgur.com/8UNPSqN.gif", "https://i.pinimg.com/originals/60/bd/28/60bd28e041d83ed07ac88e00d30843d5.gif", "https://i.pinimg.com/originals/0b/a4/d9/0ba4d92a005c69ef3bd6254c423ef4a5.gif", "https://i.pinimg.com/originals/01/e2/ea/01e2eabe71ba07db14a50878bc7ac20d.gif", "http://data.whicdn.com/images/225809250/original.gif"];
+   const imageArray = ["https://vignette.wikia.nocookie.net/yandere-simulator-fanon/images/2/24/Omg_yes_anime_gif.gif", "https://i.pinimg.com/originals/60/bd/28/60bd28e041d83ed07ac88e00d30843d5.gif", "https://i.pinimg.com/originals/0b/a4/d9/0ba4d92a005c69ef3bd6254c423ef4a5.gif", "https://i.pinimg.com/originals/01/e2/ea/01e2eabe71ba07db14a50878bc7ac20d.gif", "http://data.whicdn.com/images/225809250/original.gif"];
     const embed = {
   "image": {
     "url": (imageArray[rng])
