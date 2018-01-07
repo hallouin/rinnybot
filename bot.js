@@ -267,7 +267,7 @@ message.channel.sendMessage(user + ", you were patted by " + message.author.user
 });
 
 client.on('message', message => {
-if (message.content.startsWith(config.prefix + 'poke') && message.mentions.author) {
+if (message.content.startsWith(config.prefix + 'poke') &&& message.mentions.author) {
 
 const rng = Math.floor(Math.random()*6)+1;
     const user = message.mentions.members.first();
@@ -279,9 +279,9 @@ const embed = {
 };
 
 message.channel.sendMessage("Here you go!", { embed });
-};
+}
 
-else if (message.content.startsWith(config.prefix + 'poke') && !message.mentions.author) {
+else if (message.content.startsWith(config.prefix + 'poke') &&& !message.mentions.author) {
 
 const rng = Math.floor(Math.random()*6)+1;
     const user = message.mentions.members.first();
