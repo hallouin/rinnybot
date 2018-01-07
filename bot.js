@@ -280,10 +280,9 @@ const embed = {
 
 message.channel.sendMessage("Here you go!", { embed });
 }
-});
 
-client.on('message', message => {
-if (message.content.startsWith(config.prefix + 'poke')) {
+    
+else if (message.content.startsWith(config.prefix + 'poke') && !message.mentions.author) {
 
 const rng = Math.floor(Math.random()*6)+1;
     const user = message.mentions.members.first();
