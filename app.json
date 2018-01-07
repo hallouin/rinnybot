@@ -6,7 +6,7 @@
   "keywords": ["bot", "heroku", "music-playback", "discord", "javascript", "node", "youtube"],
   "env": {
     "MY_VAR_DISCORD": {
-      "description": "Discord token used to log in",
+      "description": "MzcxOTYzMjI3NDY4NDY0MTI4.DTQmqg.L6QYY5HTYniNJTrH-ai55nvCdwo",
       "required": true
     },
     "MY_VAR_OPENWEATHERMAP": {
