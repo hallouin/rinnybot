@@ -4,7 +4,48 @@ const config = require("./config.json");
 const yt = require('ytdl-core');
 const music = require('discord.js-music-v11');
 const Bot = new Discord.Client();
-const token = "process.env.BOT_TOKEN" // Recommended to load from json file.
+const token = "process.env.BOT_TOKEN";
+var Helper = require('./components/helper.js');
+var Queue = require('./components/queue.js');
+var TrackHelper = require('./components/trackhelper.js');
+var WordService = require('./components/wordservice.js');
+var WeatherService = require('./components/weatherservice.js');
+
+var commands = {
+  '!video': {
+    execute: getVideo,
+    description: 'get a youtube video by search word'
+  },
+  '!weather': {
+    execute: getWeather,
+    description: 'get current weather for the given city, defaults to Stockholm'
+  },
+  '!roll': {
+    execute: roll,
+    description: 'roll from 1-100'
+  },
+  '!help': {
+    execute: showHelp
+  },
+  '!words': {
+    execute: countWordsByUser,
+    description: 'get the most popular words for user of the given username, defaults to your username'
+  },
+  '!queue': {
+    execute: doQueue,
+    description: 'queue your song'
+  },
+  '!voteskip': {
+    execute: voteSkip,
+    description: 'vote to skip the current song'
+  },
+  '!song': {
+    execute: showSong,
+    description: 'get the current song'
+  }
+};
+
+//////////////////////////////////////////////////////////////////////
 
 client.on('ready', () => {
     console.log('Rinnybot is here!');
