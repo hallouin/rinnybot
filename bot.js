@@ -230,6 +230,7 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + 'pat')) {
 
 const rng = Math.floor(Math.random()*6)+1;
+const user = message.mentions.members.first();
 const imageArray = ["http://cdn-ak.f.st-hatena.com/images/fotolife/p/pema/20121222/20121222134229.gif", "http://i.imgur.com/eOJlnwP.gif", "https://media.tenor.com/images/bf646b7164b76efe82502993ee530c78/tenor.gif", "https://media.tenor.com/images/f79a9ec48bde0e592e55447b17ecfbad/tenor.gif", "http://data.whicdn.com/images/88714749/original.gif", "https://pa1.narvii.com/6390/a7cdeac333cc02e456f8851cb3ea70dc6306cc1f_hq.gif"];
 const embed = {
   "image": {
@@ -237,7 +238,7 @@ const embed = {
 }
 };
 
-message.channel.sendMessage("You were patted by " + message.author.username + "!", { embed });
+message.channel.sendMessage(user + "You were patted by " + message.author.username + "!", { embed });
 }
 });
 
