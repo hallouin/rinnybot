@@ -8,6 +8,11 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+    if (message.content.includes == (@371963227468464128)) {
+        message.channel.sendMessage("Thanks!"); }
+});
+
+client.on('message', message => {
     if (message.content === (config.prefix + 'ping')) {
     message.channel.sendMessage("Pong desu! " + `\`${Date.now() - message.createdTimestamp}\`` + "ms");
   }
