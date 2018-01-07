@@ -226,7 +226,6 @@ const embed = {
     message.channel.sendMessage("thank you!")}
     else if (message.content.startsWith(config.prefix + 'hug') && message.content.includes(user) && user == selfuser) {
         message.channel.sendMessage("You can't hug yourself!")}
-    else if (!message.content.contains(user)) return;
         else if (message.content.startsWith(config.prefix + 'hug')) {
             
 message.channel.sendMessage(user + ", you got a hug from " + message.author.username + "!", { embed });
