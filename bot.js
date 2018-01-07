@@ -313,7 +313,7 @@ if( lenny.some(word => message.content === (word)) ) {
 
 client.on("guildMemberAdd", member => {
     let guild = member.guild;
-    guild.defaultChannel.sendMessage(`Welcome ${member.user}!`).catch(console.error);
+    guild.defaultChannel.sendMessage(`Welcome ${member.user} to the server!`).catch(console.error);
   });
 
 client.login(process.env.BOT_TOKEN);
