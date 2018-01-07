@@ -8,7 +8,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content.includes == (@371963227468464128)) {
+    if (message.content.includes == ("@371963227468464128")) {
         message.channel.sendMessage("Thanks!"); }
 });
 
