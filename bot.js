@@ -8,8 +8,9 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content.includes == ("@371963227468464128")) {
-        message.channel.sendMessage("Thanks!"); }
+    if (message.mentions.bot) {
+        message.channel.sendMessage("Thank you!");
+    }
 });
 
 client.on('message', message => {
