@@ -206,6 +206,7 @@ client.on('message', message => {
 };
 message.channel.sendMessage({ embed });
 }
+    ///////////////////////////////////////////////////////////////////////////////////////
     
 });
 
@@ -222,6 +223,9 @@ const embed = {
 }
 };
 
+    if (user == message.author.bot) {
+        message.channel.sendMessage("thank you!")};
+    
 message.channel.sendMessage(user + " You got a hug from " + message.author.username + "!", { embed });
 }
 });
