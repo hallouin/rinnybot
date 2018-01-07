@@ -311,16 +311,5 @@ if( lenny.some(word => message.content === (word)) ) {
     
 });
 
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('general', 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  message.channel.sendMessage(`Welcome to the server, ${member}!` || `Knock knock! Welcome ${member}!` || `Did someone sneak in? Oh, it's just ${member}.`);
-
-}
-          
-});
 
 client.login(process.env.BOT_TOKEN);
