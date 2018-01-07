@@ -3,45 +3,16 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const yt = require('ytdl-core');
 const music = require('discord.js-music-v11');
-const Bot = new Discord.Client();
 const token = "process.env.BOT_TOKEN"
 const commands = require('./commands');
 const ytdl = require('ytdl-core');
 const state = require('./utils/state');
 const { getVoiceChannel, getTextChannel, isAfk, tts } = require('./utils');
 
-const bot = state.client = new discord.Client();
+const bot = state.client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('Rinnybot is here!');
-});
-
-bot.on('message', message => {
-	for(const commandName of Object.keys(commands)) {
-		const command = commands[commandName];
-		if(command.shouldRun(message)) {
-			command.run(message);
-		}
-	}
-});
-
-bot.on('voiceStateUpdate', (oldMember, newMember) => {
-	if (newMember.displayName === "AyanaV2") return;
-	let guild = newMember.guild;
-	let channel = getTextChannel(guild);
-	
-	if (oldMember.voiceChannel === undefined && newMember.voiceChannel) {
-		memberJoinedChannel(guild, newMember);
-	}
-	else if (oldMember.voiceChannel && newMember.voiceChannel === undefined) {
-		memberLeftChannel(guild, oldMember);
-	}
-	else if (!isAfk(guild, oldMember) && isAfk(guild, newMember)) {
-		memberLeftChannel(guild, oldMember);
-	}
-	else if (!isAfk(guild, newMember) && isAfk(guild, oldMember)) {
-		memberJoinedChannel(guild, newMember);
-	}
 });
 
 client.on('message', message => {
