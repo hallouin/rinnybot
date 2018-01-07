@@ -272,7 +272,7 @@ message.channel.sendMessage("Lewd desu!", { embed });
 }
 });
 
-client.on('message', message => {
+        client.on('message', message => {
         if (message.author.bot) return;
 const swearWords = ["i love rinnybot", "I love rinnybot", "I love rinny bot", "i love rinny bot", "I love Rinnybot", "i love Rinnybot", "I LOVE RINNYBOT", "i love you rinnybot", "I LOVE YOU RINNYBOT", "we love you rinnybot", "we love rinnybot", "I love @Rinnybot", "i love @Rinnybot"];
 if( swearWords.some(word => message.content.includes(word)) ) {
