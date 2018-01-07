@@ -318,6 +318,9 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
   // Send the message, mentioning the member
   message.channel.sendMessage(`Welcome to the server, ${member}!` || `Knock knock! Welcome ${member}!` || `Did someone sneak in? Oh, it's just ${member}.`);
+
+}
+          
 });
 
 client.login(process.env.BOT_TOKEN);
