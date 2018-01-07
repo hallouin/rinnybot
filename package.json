@@ -11,7 +11,6 @@
     "discord.js": "11.1.0",
     "request": "2.81.0",
     "youtube-dl": "^1.11.1",
-    "ytdl-core": "^0.9.1",
     "node-opus": "^0.2.1",
     "ffmpeg-binaries": "3.2.2",
     "discord.js-music-v11": "1.3.4",
@@ -20,6 +19,11 @@
     "yamljs": "^0.2.8",
     "youtube-node": "^1.3.0",
     "opusscript": "0.0.6"
+    "few": "^1.2.0",
+    "googleapis": "^16.1.0",
+    "say": "0.11.0",
+    "wav": "^1.0.1",
+    "ytdl-core": "^0.9.0"
 
   }
 }
