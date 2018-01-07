@@ -4,33 +4,44 @@ const config = require("./config.json");
 const yt = require('ytdl-core');
 const music = require('discord.js-music-v11');
 const Bot = new Discord.Client();
-const token = "process.env.BOT_TOKEN" // Recommended to load from json file.
+const token = "process.env.BOT_TOKEN"
+const commands = require('./commands');
+const ytdl = require('ytdl-core');
+const state = require('./utils/state');
+const { getVoiceChannel, getTextChannel, isAfk, tts } = require('./utils');
+
+const bot = state.client = new discord.Client();
 
 client.on('ready', () => {
     console.log('Rinnybot is here!');
 });
 
-music(Bot, {
-	prefix: '-',       // Prefix of '-'.
-	global: false,     // Server-specific queues.
-	maxQueueSize: 10,  // Maximum queue size of 10.
-	clearInvoker: true, // If permissions applicable, allow the bot to delete the messages that invoke it (start with prefix)
-    channel: 'music'   // Name of voice channel to join. If omitted, will instead join user's voice channel.
+bot.on('message', message => {
+	for(const commandName of Object.keys(commands)) {
+		const command = commands[commandName];
+		if(command.shouldRun(message)) {
+			command.run(message);
+		}
+	}
 });
 
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome, welcome, welcome, ${member}!`);
-});
-
-client.on('message', message => {
-    if (message.mentions.bot) {
-        message.channel.sendMessage("Thank you!");
-    }
+bot.on('voiceStateUpdate', (oldMember, newMember) => {
+	if (newMember.displayName === "AyanaV2") return;
+	let guild = newMember.guild;
+	let channel = getTextChannel(guild);
+	
+	if (oldMember.voiceChannel === undefined && newMember.voiceChannel) {
+		memberJoinedChannel(guild, newMember);
+	}
+	else if (oldMember.voiceChannel && newMember.voiceChannel === undefined) {
+		memberLeftChannel(guild, oldMember);
+	}
+	else if (!isAfk(guild, oldMember) && isAfk(guild, newMember)) {
+		memberLeftChannel(guild, oldMember);
+	}
+	else if (!isAfk(guild, newMember) && isAfk(guild, oldMember)) {
+		memberJoinedChannel(guild, newMember);
+	}
 });
 
 client.on('message', message => {
