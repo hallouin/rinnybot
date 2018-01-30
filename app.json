@@ -1,7 +1,0 @@
-{
-  "name": "Rinnybot",
-  "description": "Personal Rinnybot",
-  "repository": "https://github.com/hallouin/rinnybot",
-  "logo": "N/A",
-  "keywords": ["bot", "heroku", "music-playback", "discord", "javascript", "node", "youtube"],
-}
