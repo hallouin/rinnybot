@@ -14,12 +14,12 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    
-if (message.content.startsWith(config.prefix + 'hug')) {
-    const user = message.mentions.members.first();
-message.mentions.members.first().sendMessage("You got a hug from " + message.author.username + "!", { embed });
-}
-});
+    if (message.content.startsWith('/dm ') && message.mentions.users.size) {
+        var v=message.toString().split(' ').shift().shift().join(' ') // Takes the DM content from the message
+        var member=message.mentions.users[0] // The mentioned user
+        member.send(v) // send that user a DM
+    }
+})
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
