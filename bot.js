@@ -29,6 +29,12 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    if (message.content === ('@everyone')) {
+    message.mentions.sendMessage("link here");
+  }
+});
+
+client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
 const embed = {
   "title": "`r!ping`",
