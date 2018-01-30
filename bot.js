@@ -2,17 +2,35 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
 const yt = require('ytdl-core');
+const music = require('discord.js-music-v11');
+const token = "process.env.BOT_TOKEN"
 
 client.on('ready', () => {
     console.log('Rinnybot is here!');
 });
 
 client.on('message', message => {
-    if (message.content === (config.prefix + 'ping')) {
-    message.members.sendMessage("Pong desu! " + `\`${Date.now() - message.createdTimestamp}\`` + "ms");
+    if(message.content.indexOf(config.prefix) !== 0) return;
+    
+      const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+    
+    if(command === "say") {
+    // makes the bot say something and delete the message. As an example, it's open to anyone to use. 
+    // To get the "message" itself we join the `args` back into a string with spaces: 
+    const sayMessage = args.join(" ");
+    // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
+    message.delete().catch(O_o=>{}); 
+    // And we get the bot to say the thing: 
+    message.channel.send(sayMessage);
   }
 });
 
+client.on('message', message => {
+    if (message.content === (config.prefix + 'ping')) {
+    message.channel.sendMessage("Pong desu! " + `\`${Date.now() - message.createdTimestamp}\`` + "ms");
+  }
+});
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
@@ -215,6 +233,7 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + 'hug')) {
 
 const rng = Math.floor(Math.random()*6)+1;
+    const user = message.mentions.members.first();
 const imageArray = ["http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-1.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-16.gif", "https://m.popkey.co/fca5d5/bXDgV.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-19.gif", "http://gifimage.net/wp-content/uploads/2017/06/anime-hug-gif-12.gif", "https://myanimelist.cdn-dena.com/s/common/uploaded_files/1460988091-6e86cd666a30fcc1128c585c82a20cdd.gif"];
 const embed = {
   "image": {
@@ -222,7 +241,7 @@ const embed = {
 }
 };
 
-message.channel.sendMessage("You got a hug from " + message.author.username + "!", { embed });
+message.channel.sendMessage(user + ", you got a hug from " + message.author.username + "!", { embed });
 }
 });
 
@@ -231,6 +250,7 @@ client.on('message', message => {
 if (message.content.startsWith(config.prefix + 'pat')) {
 
 const rng = Math.floor(Math.random()*6)+1;
+    const user = message.mentions.members.first();
 const imageArray = ["http://cdn-ak.f.st-hatena.com/images/fotolife/p/pema/20121222/20121222134229.gif", "http://i.imgur.com/eOJlnwP.gif", "https://media.tenor.com/images/bf646b7164b76efe82502993ee530c78/tenor.gif", "https://media.tenor.com/images/f79a9ec48bde0e592e55447b17ecfbad/tenor.gif", "http://data.whicdn.com/images/88714749/original.gif", "https://pa1.narvii.com/6390/a7cdeac333cc02e456f8851cb3ea70dc6306cc1f_hq.gif"];
 const embed = {
   "image": {
@@ -238,15 +258,15 @@ const embed = {
 }
 };
 
-message.channel.sendMessage("You were patted by " + message.author.username + "!", { embed });
+message.channel.sendMessage(user + ", you were patted by " + message.author.username + "!", { embed });
 }
 });
 
 client.on('message', message => {
-    
 if (message.content.startsWith(config.prefix + 'poke')) {
 
 const rng = Math.floor(Math.random()*6)+1;
+    const user = message.mentions.members.first();
 const imageArray = ["https://k39.kn3.net/taringa/5/6/3/9/8/8/9/kukury/EF2.gif", "https://i.pinimg.com/originals/bf/55/12/bf55122ccfae1e283ceafea81657aa43.gif", "http://gifimage.net/wp-content/uploads/2017/08/poke-gif-16.gif", "https://i.pinimg.com/originals/ec/d5/db/ecd5db48f5bdfb9b67f86f2094554839.gif", "https://33.media.tumblr.com/66980aebf476906cdeaef32948ead3b5/tumblr_mibugnXqaz1rx1dfqo1_500.gif"];
 const embed = {
   "image": {
@@ -254,7 +274,7 @@ const embed = {
 }
 };
 
-message.channel.sendMessage("You were poked by " + message.author.username + "!", { embed });
+message.channel.sendMessage(user + ", you were poked by " + message.author.username + "!", { embed });
 }
 });
 
