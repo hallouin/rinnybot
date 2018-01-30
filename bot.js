@@ -9,17 +9,10 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'ping')) {
-    message.channel.sendMessage("Pong desu! " + `\`${Date.now() - message.createdTimestamp}\`` + "ms");
+    message.members.sendMessage("Pong desu! " + `\`${Date.now() - message.createdTimestamp}\`` + "ms");
   }
 });
 
-client.on('message', message => {
-    if (message.content.startsWith('/dm ') && message.mentions.users.size) {
-        var v=message.toString().split(' ').shift().shift().join(' ') // Takes the DM content from the message
-        var member=message.mentions.users[0] // The mentioned user
-        member.send(v) // send that user a DM
-    }
-})
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
