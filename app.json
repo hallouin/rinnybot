@@ -4,12 +4,4 @@
   "repository": "https://github.com/hallouin/rinnybot",
   "logo": "N/A",
   "keywords": ["bot", "heroku", "music-playback", "discord", "javascript", "node", "youtube"],
-  "buildpacks": [
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
-    },
-    {
-      "url": "https://github.com/issueapp/heroku-buildpack-ffmpeg"
-    }
-  ]
 }
