@@ -14,7 +14,7 @@ client.on('message', message => {
 });
 
 client.on('message', function(message) {
-        client.send(message.author, "Hello!");
+        message.user.sendMessage("Hello!");
 });
 
 client.on('message', message => {
