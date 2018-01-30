@@ -11,6 +11,6 @@
     "discord.js": "11.1.0",
     "request": "2.81.0",
     "youtube-dl": "^1.11.1",
-    "node-opus": "^0.2.1",
+    "node-opus": "^0.2.1"
   }
 }
