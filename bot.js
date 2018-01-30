@@ -13,8 +13,12 @@ client.on('message', message => {
   }
 });
 
-client.on('message', function(message) {
-        message.user.sendMessage("Hello!");
+client.on('message', message => {
+    
+if (message.content.startsWith(config.prefix + 'hug')) {
+    const user = message.mentions.members.first();
+message.mentions.sendMessage("You got a hug from " + message.author.username + "!", { embed });
+}
 });
 
 client.on('message', message => {
