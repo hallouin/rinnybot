@@ -17,7 +17,7 @@ client.on('message', message => {
     
 if (message.content.startsWith(config.prefix + 'hug')) {
     const user = message.mentions.members.first();
-message.mentions.sendMessage("You got a hug from " + message.author.username + "!", { embed });
+message.mentions.members.first().sendMessage("You got a hug from " + message.author.username + "!", { embed });
 }
 });
 
