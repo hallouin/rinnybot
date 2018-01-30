@@ -13,11 +13,8 @@ client.on('message', message => {
   }
 });
 
-client.on('message', message => {
-    const user = message.mentions.members();
-    if (message.content === ('user')) {
-    message.mentions.sendMessage("link here");
-  }
+client.on('message', function(message) {
+        client.sendMessage(message.author, "Hello!");
 });
 
 client.on('message', message => {
