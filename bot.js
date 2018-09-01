@@ -31,7 +31,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === (config.prefix + 'tank')) {
+    if( message.content.startsWith(config.prefix + 'tank' )) {
     
     let msg = message.content;
     let argString = msg.substr( msg.indexOf(' ') + 1 );
