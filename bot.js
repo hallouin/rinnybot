@@ -39,7 +39,7 @@ client.on('message', message => {
     let n = Math.floor(Math.random()*argArr.length)+1;
     let tank = argArr[n];
 
-    message.channel.sendMessage( n );
+    message.channel.sendMessage( argArr );
   }
 });
 
