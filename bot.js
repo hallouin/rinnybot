@@ -31,7 +31,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (command === "comp") {
+    if (message.content === (config.prefix + 'tank')) {
 let n = Math.floor(Math.random()*args.length)+1;
 let tank = args[n];
 
