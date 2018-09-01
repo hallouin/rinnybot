@@ -37,7 +37,7 @@ client.on('message', message => {
     let msg = message.content;
     let argString = msg.substr( msg.indexOf(' ') + 1 );
     let response = argString.split(' ');
-    const rng = Math.floor(Math.random()*response.length)+1;
+    const rng = Math.floor(Math.random()*response.length);
     const tank = response
 
     message.channel.sendMessage("I'm feeling like " + tank[rng] + " is up for the challenge!");
@@ -51,7 +51,7 @@ client.on('message', message => {
     let msg = message.content;
     let argString = msg.substr( msg.indexOf(' ') + 1 );
     let response = argString.split(' ');
-    const rng = Math.floor(Math.random()*response.length)+1;
+    const rng = Math.floor(Math.random()*response.length);
     const tank = response
 
     message.channel.sendMessage("I need healing, " + tank[rng] + "!");
@@ -65,7 +65,7 @@ client.on('message', message => {
     let msg = message.content;
     let argString = msg.substr( msg.indexOf(' ') + 1 );
     let response = argString.split(' ');
-    const rng = Math.floor(Math.random()*response.length)+1;
+    const rng = Math.floor(Math.random()*response.length);
     const tank = response
 
     message.channel.sendMessage("Quick, " + tank[rng] + "! Get on the damn point!");
