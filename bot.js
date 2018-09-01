@@ -31,6 +31,17 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+    if (command === "comp") {
+let nmax = args.length
+let n = Math.floor(Math.random()*nmax)+1;
+let tank1 = args[n];
+
+message.reply('I'm feeling like ${tank1} is up to tanking this match. How about it?');
+}
+
+});
+
+client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
 const embed = {
   "title": "`r!ping`",
