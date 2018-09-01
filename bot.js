@@ -32,13 +32,18 @@ client.on('message', message => {
 
 client.on('message', message => {
         if (message.author.bot) return;
-    if( message.content.startsWith(config.prefix + 'tank' )) {
     
     let msg = message.content;
     let argString = msg.substr( msg.indexOf(' ') + 1 );
     let response = argString.split(' ');
     const rng = Math.floor(Math.random()*response.length)+1;
+    const rng2 = Math.floor(Math.random()*response.length)+1;
     const tank = response
+     if(rng === rng2) return;
+    if( message.content.startsWith(config.prefix + 'tank' )) {
+    
+    
+  
 
     message.channel.sendMessage("I'm feeling like " + tank[rng] + " is up for the challenge!");
   }
