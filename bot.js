@@ -39,12 +39,39 @@ client.on('message', message => {
     let response = argString.split(' ');
     const rng = Math.floor(Math.random()*response.length)+1;
     const tank = response
-        
 
-    message.channel.sendMessage( tank[rng] );
+    message.channel.sendMessage("I'm feeling like" + tank[rng] + "is up for the challenge!");
   }
 });
 
+client.on('message', message => {
+        if (message.author.bot) return;
+    if( message.content.startsWith(config.prefix + 'support' )) {
+    
+    let msg = message.content;
+    let argString = msg.substr( msg.indexOf(' ') + 1 );
+    let response = argString.split(' ');
+    const rng = Math.floor(Math.random()*response.length)+1;
+    const tank = response
+
+    message.channel.sendMessage("I need healing," + tank[rng] + "!");
+  }
+});
+
+client.on('message', message => {
+        if (message.author.bot) return;
+    if( message.content.startsWith(config.prefix + 'dps' )) {
+    
+    let msg = message.content;
+    let argString = msg.substr( msg.indexOf(' ') + 1 );
+    let response = argString.split(' ');
+    const rng = Math.floor(Math.random()*response.length)+1;
+    const tank = response
+
+    message.channel.sendMessage("Quick," + tank[rng] + "! Get on the damn point!");
+  }
+});
+ 
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
