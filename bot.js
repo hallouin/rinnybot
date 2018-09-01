@@ -32,14 +32,14 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (command === "comp") {
-let nmax = args.length
-let n = Math.floor(Math.random()*nmax)+1;
-let tank1 = args[n];
+let n = Math.floor(Math.random()*args.length)+1;
+let tank = args[n];
 
-message.reply('I'm feeling like ${tank1} is up to tanking this match. How about it?');
+message.channel.sendMessage("I'm feeling like " + tank + " is up to tanking this match. How about it?");
 }
 
 });
+
 
 client.on('message', message => {
     if (message.content === (config.prefix + 'commands')) {
