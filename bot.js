@@ -40,7 +40,7 @@ client.on('message', message => {
     const rng = Math.floor(Math.random()*response.length)+1;
     const tank = response
 
-    message.channel.sendMessage("I'm feeling like " + { tank[rng] } + "is up for the challenge!");
+    message.channel.sendMessage("I'm feeling like " tank[rng] "is up for the challenge!");
   }
 });
 
@@ -54,7 +54,7 @@ client.on('message', message => {
     const rng = Math.floor(Math.random()*response.length)+1;
     const tank = response
 
-    message.channel.sendMessage("I need healing, " + { tank[rng] } + "!");
+    message.channel.sendMessage("I need healing, " tank[rng] "!");
   }
 });
 
@@ -68,7 +68,7 @@ client.on('message', message => {
     const rng = Math.floor(Math.random()*response.length)+1;
     const tank = response
 
-    message.channel.sendMessage("Quick, " + { tank[rng] } + "! Get on the damn point!");
+    message.channel.sendMessage("Quick, " tank[rng] "! Get on the damn point!");
   }
 });
  
