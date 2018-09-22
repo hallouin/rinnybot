@@ -25,7 +25,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === (config.prefix + 'commands')) {
+    if (message.content === (config.prefix + 'purge')) {
 
       if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
         message.channel.sendMessage("Sorry, you don't have the permission to execute the command \""+message.content+"\"");
